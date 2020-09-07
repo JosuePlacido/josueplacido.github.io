@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Josué Placido</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
+      rel="stylesheet"
+    /><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+      body,
+      html,
+      p {
+        padding: 0;
+        margin: 0;
+        font-family: Nunito, sans-serif;
+        font-size: 100%;
+        color: #222;
+      }
+      p{
+        font-family: Poppins, sans-serif;
+      }
+      b,em,small,footer {
+        font-family: Nunito, monospace;
+      }
+      h1,h2,h3,h4,h5,h6{
+        font-family: Raleway, cursive;
+      }
+      body {
+        background: #eee;
+      }
+      header {
+        padding: 1rem 1rem 3rem 1rem;
+        background-color: #7500aa;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        filter: drop-shadow(0px 5px 5px #333333);
+        -webkit-filter: drop-shadow(0px 5px 5px #333333);
+        -moz-filter: drop-shadow(0px 5px 5px #333333);
+      }
+      header h1,
+      h2 {
+        text-align: center;
+        margin: 0;
+      }
+      header span{
+        font-size:70%;
+        text-align: right;
+        margin-top:2rem;
+        margin-bottom:-3rem;
+        font-family: Poppins;
+        font-style:italic;
+      }
+      .mode{
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-family: Poppins;
+        color:#300050;
+        z-index:2;
+      }
+      header h2 {
+        text-align: center;
+        font-size: 120%;
+        margin-bottom: 1.5rem;
+      }
+      .flex-centro {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+      }
+      .foto {
+        align-self: center;
+        border-radius: 50%;
+        margin-top: -100px;
+        border: solid 5px #dddddd;
+        z-index: 1;
+      }
+      .display-central {
+        width: 100vw;
+        max-width: 800px;
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "about about"
+                              "stacks formation"
+                              "project project";
+      }
+      .about{
+        grid-area: about;
+      }
+      .stacks{
+        grid-area:stacks;
+      }
+      .formation{
+        grid-area:formation;
+      }
+      .projects{
+        grid-area:project;
+      }
+      .formation h2,.stacks h2, .projects h2{
+        text-align:left;
+        text-transform: uppercase;
+        color:#300050
+      }
+      .display {
+        background-color: #fff;
+        filter: drop-shadow(0px 3px 3px #aaa);
+        -webkit-filter: drop-shadow(0px 3px 3px #aaa);
+        -moz-filter: drop-shadow(0px 3px 3px #aaa);
+        padding: 2rem;
+      }
+      .badge {
+        padding: 0 5px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        color: white;
+      }
+      .badge > i {
+        font-size: 12px;
+      }
+      .github {
+        background-color: black;
+        color: white;
+      }
+      .github:hover {
+        background-color: #333333;
+      }
+      .discard{
+        display:none;
+      }
+      .linkedin {
+        background-color: #0077b5;
+        color: white;
+      }
+      .linkedin:hover {
+        background-color: #00aae8;
+      }
+      .rocketseat {
+        background-color: #7159c1;
+        color: white;
+      }
+      .rocketseat:hover {
+        background-color: #b48cf4;
+      }
+      .contact {
+        margin-top: 0.7rem;
+        color: #666666;
+      }
+      .contact > i {
+        font-size: 12px;
+        margin-right: 5px;
+      }
+      .about > p {
+        font-size: 110%;
+        color: black;
+        text-align: justify;
+      }
+      .about > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about > span a {
+        margin: 10px 3px;
+      }
+      .card{
+        padding:0.5rem 0.5rem;
+        border-radius: 3px;
+        border-left: solid 3px blueviolet;
+        font-size: 80%;
+        margin: 0.5rem 0;
+      }
+      .card h3{
+        font-family: Raleway;
+        font-style: italic;
+        color:#300050;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top:0.5rem;
+        margin-bottom:0.5rem;
+      }
+      .card h3 small{
+        text-transform: capitalize;
+        font-family: Nunito;
+        font-weight: normal;
+        font-style: normal;
+        color:#000
+      }
+      .card footer{
+        border-color:#aaa;
+        background-color:#ddd;
+        border-top:solid 1px #ddd;
+        margin: -0.5rem;
+        margin-top: 0.5rem;
+        padding:0.5rem;
+        font-family: Poppins;
+      }
+progress {
+	display:inline-block;
+	width:100%;
+	margin:0;
+	background:none;
+	border: 0;
+	text-align: left;
+	position:relative;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:5px;
+	background-color: #ddd;
+	border-radius: 0px;
+	box-shadow:0px 0px 6px #bbb inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:5px;
+	margin:0px -10px 0 0;
+	background: #300050;
+	border-radius: 0px;
+}
+.footer{
+  padding: 1rem;
+  background-color: #ddd;
+  border-top:3px solid blueviolet;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.footer .card{
+  border-left:none;
+}
+.footer .card ul{
+  padding-inline-start:15px;
+}.tgl {
+	 display: none;
+}
+ .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+	 box-sizing: border-box;
+}
+ .tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+	 background: none;
+}
+ .tgl + .tgl-btn {
+	 outline: 0;
+	 display: block;
+	 width: 4em;
+	 height: 2em;
+	 position: relative;
+	 cursor: pointer;
+	 user-select: none;
+}
+ .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+	 position: relative;
+	 display: block;
+	 content: "";
+	 width: 50%;
+	 height: 100%;
+}
+ .tgl + .tgl-btn:after {
+	 left: 0;
+}
+ .tgl + .tgl-btn:before {
+	 display: none;
+}
+ .tgl:checked + .tgl-btn:after {
+	 left: 50%;
+}
+ .tgl-skewed + .tgl-btn {
+	 overflow: hidden;
+	 transform: skew(-10deg);
+	 backface-visibility: hidden;
+	 transition: all 0.2s ease;
+	 font-family: sans-serif;
+	 background: #888;
+}
+ .tgl-skewed + .tgl-btn:after, .tgl-skewed + .tgl-btn:before {
+	 transform: skew(10deg);
+	 display: inline-block;
+	 transition: all 0.2s ease;
+	 width: 100%;
+	 text-align: center;
+	 position: absolute;
+	 line-height: 2em;
+	 font-weight: bold;
+	 color: #fff;
+	 text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+}
+ .tgl-skewed + .tgl-btn:after {
+	 left: 100%;
+	 content: attr(data-tg-on);
+}
+ .tgl-skewed + .tgl-btn:before {
+	 left: 0;
+	 content: attr(data-tg-off);
+}
+ .tgl-skewed + .tgl-btn:active {
+	 background: rgb(95, 78, 78);
+}
+ .tgl-skewed + .tgl-btn:active:before {
+	 left: -10%;
+}
+ .tgl-skewed:checked + .tgl-btn {
+	 background: blueviolet;
+}
+ .tgl-skewed:checked + .tgl-btn:before {
+	 left: -100%;
+}
+ .tgl-skewed:checked + .tgl-btn:after {
+	 left: 0;
+}
+ .tgl-skewed:checked + .tgl-btn:active:after {
+	 left: 10%;
+}
+
+
+      @media(max-width: 600px){
+        .display-central {
+          grid-template-columns: 1fr;
+          grid-template-areas: "about "
+                                "formation"
+                                "stacks"
+                                " project";
+        }
+        .card{
+          border-left:none;
+        }
+        .footer{          
+          grid-template-columns: 1fr;
+        }
+
+      }
+ 
+    </style>
+  </head>
+  <body>
+    <span class="mode">
+     <b>Resumido</b> 
+    <input class="tgl tgl-skewed" checked id="cb3" type="checkbox" onchange="ToggleVisible()"/>
+    <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="cb3">
+    </span>
+    <header>
+      <h1>Josué Placido da Silveira Junior</h1>
+      <h2>Desenvolvedor Fullstack Web/Mobile.</h2>
+      <span>Ultima atualizacao: 07/09/2020</span>
+    </header>
+    <main class="flex-centro">
+      <div class="display-central">
+        <div class="display flex-centro about">
+          <img
+            class="foto"
+            src="http://GitHub.com/JosuePlacido.png"
+            width="150"
+            height="150"
+            alt="Foto do perfil"
+          />
+          <span>
+            <a href="http://GitHub.com/JosuePlacido.png" class="badge github"
+              ><i class="im im-github"></i></a>
+            <a
+              href="https://www.linkedin.com/in/josue-placido-da-silveira-junior-28a5941b4/"
+              class="badge linkedin"
+              ><i class="im im-linkedin"></i></a>
+          </span>
+          <p>Sou desenvolvedor fullstack utilizando C# e .NET Core, e 
+            estou expandindo meus horizontes para tecnologias como React/React Native
+             e typescript. Evoluir no desenvolvimento de testes automatizados 
+             e posteriormente aprrender sobre conteinarização (Docker).</p>
+          <div class="contact">
+            <i class="im im-mail"></i> ozzyplacidojunior@hotmail.com<br />
+            <i class="im im-whatsapp"></i> (45) 99109-1914<br />
+            <i class="im im-location"></i> Medianeira/PR<br />
+            <i class="im im-github"></i> Github.com/JosuePlacido<br/>
+            <i class="im im-linkedin"></i> Linkedin.com/in/josue-placido-da-silveira-junior-28a5941b4
+          </div>
+        </div>
+        <div class="stacks">
+          <h2 id="conhecimentos">Conhecimentos</h2>
+          <article class="display card">
+              <h3>
+                Front-end
+              </h3>
+              <span>
+                <b>HTML5</b><progress max="100" value="85"></progress>            
+              </span>
+              <span>
+                <b>CSS3</b><progress max="100" value="70"></progress>            
+              </span>
+              <span>
+                <b>Bootstrap</b><progress max="100" value="80"></progress>            
+              </span>
+              <span>
+                <b>jQuery</b><progress max="100" value="70"></progress>            
+              </span>
+              <span>
+                <b>JavaScript (ECMS6)</b><progress max="100" value="70"></progress>            
+              </span>
+              <span>
+                <b>React</b><progress max="100" value="40"></progress>            
+              </span>
+              <span>
+                <b>TypeScript</b><progress max="100" value="40"></progress>            
+              </span>
+          </article>
+          <article class="display card">
+              <h3>
+                Back-end
+              </h3>
+              <span>
+                <b>C#</b><progress max="100" value="80"></progress>            
+              </span>
+              <span>
+                <b>Asp.Net Core </b><progress max="100" value="80"></progress>            
+              </span>
+              <span>
+                <b>EntityFramework</b><progress max="100" value="80"></progress>            
+              </span>
+              <span>
+                <b>NodeJS (Estudando)</b><progress max="100" value="40"></progress>            
+              </span>
+              <span>
+                <b>JavaScript (ECMS6)</b><progress max="100" value="70"></progress>            
+              </span>
+              <span>
+                <b>TypeScript</b><progress max="100" value="40"></progress>            
+              </span>
+              <span>
+                <b>Java (Desktop)</b><progress max="100" value="70"></progress>            
+              </span>
+          </article>       
+          <article class="display card">
+              <h3>
+                Banco de dados
+              </h3>
+              <span>
+                <b>SQL Server (T-SQL)</b><progress max="100" value="80"></progress>            
+              </span>
+              <span>
+                <b>MySQL</b><progress max="100" value="65"></progress>            
+              </span>
+              <span>
+                <b>PostgreSQL (plpsql)</b><progress max="100" value="50"></progress>            
+              </span>
+          </article>       
+          <article class="display card">
+              <h3>
+                Mobile
+              </h3>
+              <span>
+                <b>Android nativo (Java)</b><progress max="100" value="60"></progress>            
+              </span>
+              <span>
+                <b>React Native</b><progress max="100" value="50"></progress>            
+              </span>
+          </article>
+          <article class="display card discard">
+              <h3>
+                Ferramentas
+              </h3>
+              <span>
+                <b>Git</b><progress max="100" value="90"></progress>            
+              </span>
+              <span>
+                <b>Azure Devops</b><progress max="100" value="65"></progress>            
+              </span>
+              <span>
+                <b>Postman</b><progress max="100" value="55"></progress>            
+              </span>
+              <span>
+                <b>JIRA</b><progress max="100" value="50"></progress>            
+              </span>
+          </article>
+        </div>
+        <div class="formation">
+          <h2>Formação</h2>
+          <article class="display card">
+              <h3>
+                Ciência
+                da Computação
+                <br/>
+                <small>
+                  OUT/2012 - DEZ/2020                 
+                </small>
+              </h3>
+              <b>Universidade Tecnológica Federal do Paraná</b>
+          </article>
+          <article class="display card">
+              <h3>
+                Técnico
+              em informática
+                <br/>
+                <small>
+                  AGO/2009 - DEZ/2010                 
+                </small>
+              </h3>
+              <b>ETEC Dr. Demétrio Azevedo Junior (Centro Paula Souza)</b>
+          </article>
+          <article class="display card">
+              <h3>
+                Ensino Médio Completo
+                <br/>
+                <small>
+                  JAN/2008 - DEZ/2010                 
+                </small>
+              </h3>
+              <b>EE Prof Jeminiano David Müzel</b>
+          </article>
+          <br/>
+        <h2 id="exper-ncia-profissional">Experência Profissional</h2>
+          <article class="display card">
+              <h3>
+                Desenvolvedor Fullstack
+                <br/>
+                <small>
+                  JAN/2020 - atual                 
+                </small>
+              </h3>
+              <h4>autônomo/empreendedor</h4>
+              <p>
+                Desenvolvimento de aplicativos web/mobile.<br/>  
+                Fundando a própria empresa (Alternativa digital)
+              </p>
+              <footer><p>
+                Tecnologias utilizadas: C#, dotNet Core, HTML, CSS, Javascript,
+                Jquery, Git, Azure Devops.
+              </p>
+              </footer>
+          </article>
+          <article class="display card">
+              <h3>
+                Programador Java
+                <br/>
+                <small>
+                  FEV/2018 - JUN/2018                 
+                </small>
+              </h3>
+              <h4>JL Informática</h4>
+              <p>                
+                Implementar funcionalidades e corrigir bugs nas aplicações Desktop do sistema.
+              </p>
+              <footer>
+                Tecnologias utilizadas: Java (versão 8), PostgreSQL, Git, Jira
+                  Software e JasperSoft (Relatórios)
+              </footer>
+          </article>
+          <article class="display card discard">
+              <h3>
+                Estagiário
+                <br/>
+                <small>
+                  Nov/2013 - DEZ/2013                 
+                </small>
+              </h3>
+              <h4>Secretaria municipal de educação de Medianeira</h4>
+              <p>               
+                Manutenção e configuração dos laboratórios escolares do
+                ensino fundamental.
+              </p>
+              <footer><p>
+                Tecnologias utilizadas: Linux.
+              </p>
+              </footer>
+          </article>
+          <article class="display card discard">
+              <h3>
+                Monitor
+                <br/>
+                <small>
+                  FEV/2012 - JUN/2012                 
+                </small>
+              </h3>
+              <h4>Faculdade de Ciências Sociais e Agrárias de Itapeva (FAIT)</h4>
+              <p>               
+                  Gerenciamento, Manutenção e configuração dos computadores e
+                  outros dispositivos.
+              </p>
+          </article>
+          <article class="display card discard">
+              <h3>
+                Auxiliar de escritório.
+                <br/>
+                <small>
+                  JAN/2011 - MAI/2011                 
+                </small>
+              </h3>
+              <h4>Agência Magne RH</h4>
+              <p>               
+                  Atendimento ao público, design de artes e panfletos, serviços administrativos
+              </p>
+          </article>          
+        </div>
+        <div class="projects">
+          <h2 id="conhecimentos">Projetos</h2>
+          <article class="display card">
+              <h3>
+                Aplicativo: SCORE IBOV
+                <br/>
+                <small>
+                  Android: Lançado,Iphone: Desenvolvendo                                   
+                </small>
+              </h3>
+              <h4>Alternativa Digital</h4>
+              <p>            
+                Aplicativo mobile que faz uma análise fundamentalista
+                das ações presentes na IBOVESPA, atribuindo-a um <i>Score</i>
+                com base na comparação de seus indicadores de rendimento com os
+                das cnocorrentes de seu setor.
+              </p>
+              <footer>
+                <p>Site: <a href="https://play.google.com/store/apps/details?id=com.alternativadigital.scoreibov">SCORE Ibov</a></p>
+                <p>Stack: Android nativo com Java.</p>
+              </footer>
+          </article>
+          <article class="display card">
+              <h3>
+                Site E-Commerce Ótica
+                <br/>
+                <small>
+                  Atualizando
+                                   
+                </small>
+              </h3>
+              <h4>Ótica Boa Vista</h4>
+              <p>            
+                Aplicação web que contém as seguintes funcionalidades:
+                <ul>
+                  <li>Gerenciamento de produtos, marcas, promoções, cupons de desconto e categoria;</li>
+                  <li>Atualização de venda (PagSeguro);</li>
+                  <li>Notificações por email;</li>
+                  <li>Captação de emails;</li>
+                  <li>Salvar e alterar Templates de emails;</li>
+                  <li>Gerar relatório básico de venda;</li>
+                  <li>Configurar visual dos banners e alerta de newsletter.</li>
+                </ul>
+                Integrações:
+                <ul>
+                  <li>PagSeguro</li>
+                  <li>Correios</li>
+                  <li>Google analytics</li>
+                  <li>Pixel do facebok <small>(am andamento)</small></li>
+                  <li>Sistema interno da empresa <small>(am andamento)</small></li>
+                  <li>Login: Google</li>
+                  <li>Login: Facebook,instagram <small>(am andamento)</small></li>
+                  <li>Correios</li>
+                </ul> 
+              </p>
+              <footer>
+                <p>Site: <a href="http://www.oticaboavista.com/">Ótica Boa Vista</a></p>
+                <p>Stack: Asp.Net Core 2.x, SQL Server, jQuery, Bootstrap.</p>
+              </footer>
+          </article>
+          <article class="display card discard">
+              <h3>
+                Plataforma web para gamificação de aula.
+                <br/>
+                <small>
+                  Concluído e aprovado                                   
+                </small>
+              </h3>
+              <h4>Trabalho entregue para avaliação de TCC na UTFPR.</h4>
+              <p>            
+                Aplicativo web que suporta gamificação de aula
+                funcionalidades e conceitos de <i>gamification</i> aplicados:
+                <ul>
+                  <li>Cadastro de Disciplina, turmas, atividades,
+                     material de estudo e perguntas;</li>
+                  <li>Pontos de progresso, experiência, vida, energia;</li>
+                  <li>Representação do aluno (avatar);</li>
+                  <li>Imersão num mundo fictício (mapa da disciplina);</li>
+                  <li>Socialização (transações financeiras (moeda ficticia));</li>
+                  <li>Coleção e conquista (Selos de realizações/badges);</li>
+                  <li>Desafios e missões (Quizes interativos e questionários);</li>
+                  <li>Progressão (pontos deexperiencia e níveis dos avatares).</li>
+                </ul>
+                que faz uma análise fundamentalista
+                das ações presentes na IBOVESPA, atribuindo-a um <i>Score</i>
+                com base na comparação de seus indicadores de rendimento com os
+                das cnocorrentes de seu setor.
+              </p>
+              <footer>
+                <p>Repositorio: <a href="https://juzao.visualstudio.com/TCC">Azure Repos</a></p>
+                <p>Stack: Asp.Net Core 2.x, SQL Server, jQuery, Bootstrap.</p>
+              </footer>
+          </article>  
+        </div>
+      </div>
+    </main>
+    <footer class="footer">      
+        <div class="display card">
+          <h3>Cursos</h3>
+          <ul>
+            <li>
+              Montagem e manutenção de microcomputadores
+              - Plenatec 2009
+            </li>
+          </ul>
+        </div>
+        <div class="display card">
+          <h3>Eventos</h3>
+          <ul>
+            <li>
+              Meditec V
+            </li>
+            <li>
+              Maratona de programação 2013
+            </li>
+          </ul>
+          <footer>
+            <a href="">Certificado Meditec V</a>
+          </footer>
+        </div>
+        <div class="display card">
+          <h3>Idiomas</h3>
+          <ul>
+            <li>
+              Português (nativo)
+            </li>
+            <li>
+              Inglês intermediário
+            </li>
+          </ul>
+        </div>
+    </footer>
+    <script>
+      function ToggleVisible(){
+        checkBox = document.getElementById('cb3');
+        display = checkBox.checked?'none':'block';
+        document.querySelectorAll('.discard').forEach((item) => item.style.display = display);
+      }
+    </script>
+  </body>
+</html>
