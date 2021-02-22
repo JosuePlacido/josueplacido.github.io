@@ -1,721 +1,646 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Josué Placido</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
-      rel="stylesheet"
-    /><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <style>
-      body,
-      html,
-      p {
-        padding: 0;
-        margin: 0;
-        font-family: Nunito, sans-serif;
-        font-size: 100%;
-        color: #222;
-      }
-      p{
-        font-family: Poppins, sans-serif;
-      }
-      b,em,small,footer {
-        font-family: Nunito, monospace;
-      }
-      h1,h2,h3,h4,h5,h6{
-        font-family: Raleway, cursive;
-      }
-      body {
-        background: #eee;
-      }
-      header {
-        padding: 1rem 1rem 3rem 1rem;
-        background-color: #7500aa;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        filter: drop-shadow(0px 5px 5px #333333);
-        -webkit-filter: drop-shadow(0px 5px 5px #333333);
-        -moz-filter: drop-shadow(0px 5px 5px #333333);
-      }
-      header h1,
-      h2 {
-        text-align: center;
-        margin: 0;
-      }
-      header span{
-        font-size:70%;
-        text-align: right;
-        margin-top:2rem;
-        margin-bottom:-3rem;
-        font-family: Poppins;
-        font-style:italic;
-      }
-      .mode{
-        position: fixed;
-        top: 0;
-        right: 0;
-        font-family: Poppins;
-        color:#300050;
-        z-index:2;
-      }
-      header h2 {
-        text-align: center;
-        font-size: 120%;
-        margin-bottom: 1.5rem;
-      }
-      .flex-centro {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-      }
-      .foto {
-        align-self: center;
-        border-radius: 50%;
-        margin-top: -100px;
-        border: solid 5px #dddddd;
-        z-index: 1;
-      }
-      .display-central {
-        width: 100vw;
-        max-width: 800px;
-        align-self: center;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        grid-template-areas: "about about"
-                              "stacks formation"
-                              "project project";
-      }
-      .about{
-        grid-area: about;
-      }
-      .stacks{
-        grid-area:stacks;
-      }
-      .formation{
-        grid-area:formation;
-      }
-      .projects{
-        grid-area:project;
-      }
-      .formation h2,.stacks h2, .projects h2{
-        text-align:left;
-        text-transform: uppercase;
-        color:#300050
-      }
-      .display {
-        background-color: #fff;
-        filter: drop-shadow(0px 3px 3px #aaa);
-        -webkit-filter: drop-shadow(0px 3px 3px #aaa);
-        -moz-filter: drop-shadow(0px 3px 3px #aaa);
-        padding: 2rem;
-      }
-      .badge {
-        padding: 0 5px;
-        text-decoration: none;
-        transition: background-color 0.2s;
-        color: white;
-      }
-      .badge > i {
-        font-size: 12px;
-      }
-      .github {
-        background-color: black;
-        color: white;
-      }
-      .github:hover {
-        background-color: #333333;
-      }
-      .discard{
-        display:none;
-      }
-      .linkedin {
-        background-color: #0077b5;
-        color: white;
-      }
-      .linkedin:hover {
-        background-color: #00aae8;
-      }
-      .rocketseat {
-        background-color: #7159c1;
-        color: white;
-      }
-      .rocketseat:hover {
-        background-color: #b48cf4;
-      }
-      .contact {
-        margin-top: 0.7rem;
-        color: #666666;
-      }
-      .contact > i {
-        font-size: 12px;
-        margin-right: 5px;
-      }
-      .about > p {
-        font-size: 110%;
-        color: black;
-        text-align: justify;
-      }
-      .about > span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .about > span a {
-        margin: 10px 3px;
-      }
-      .card{
-        padding:0.5rem 0.5rem;
-        border-radius: 3px;
-        border-left: solid 3px blueviolet;
-        font-size: 80%;
-        margin: 0.5rem 0;
-      }
-      .card h3{
-        font-family: Raleway;
-        font-style: italic;
-        color:#300050;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin-top:0.5rem;
-        margin-bottom:0.5rem;
-      }
-      .card h3 small{
-        text-transform: capitalize;
-        font-family: Nunito;
-        font-weight: normal;
-        font-style: normal;
-        color:#000
-      }
-      .card footer{
-        border-color:#aaa;
-        background-color:#ddd;
-        border-top:solid 1px #ddd;
-        margin: -0.5rem;
-        margin-top: 0.5rem;
-        padding:0.5rem;
-        font-family: Poppins;
-      }
-progress {
-	display:inline-block;
-	width:100%;
-	margin:0;
-	background:none;
-	border: 0;
-	text-align: left;
-	position:relative;
-	font-size: 0.8em;
-}
-progress::-webkit-progress-bar {
-	height:5px;
-	background-color: #ddd;
-	border-radius: 0px;
-	box-shadow:0px 0px 6px #bbb inset;
-}
-progress::-webkit-progress-value {
-	display:inline-block;
-	float:left;
-	height:5px;
-	margin:0px -10px 0 0;
-	background: #300050;
-	border-radius: 0px;
-}
-.footer{
-  padding: 1rem;
-  background-color: #ddd;
-  border-top:3px solid blueviolet;
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-.footer .card{
-  border-left:none;
-}
-.footer .card ul{
-  padding-inline-start:15px;
-}.tgl {
-	 display: none;
-}
- .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
-	 box-sizing: border-box;
-}
- .tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
-	 background: none;
-}
- .tgl + .tgl-btn {
-	 outline: 0;
-	 display: block;
-	 width: 4em;
-	 height: 2em;
-	 position: relative;
-	 cursor: pointer;
-	 user-select: none;
-}
- .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
-	 position: relative;
-	 display: block;
-	 content: "";
-	 width: 50%;
-	 height: 100%;
-}
- .tgl + .tgl-btn:after {
-	 left: 0;
-}
- .tgl + .tgl-btn:before {
-	 display: none;
-}
- .tgl:checked + .tgl-btn:after {
-	 left: 50%;
-}
- .tgl-skewed + .tgl-btn {
-	 overflow: hidden;
-	 transform: skew(-10deg);
-	 backface-visibility: hidden;
-	 transition: all 0.2s ease;
-	 font-family: sans-serif;
-	 background: #888;
-}
- .tgl-skewed + .tgl-btn:after, .tgl-skewed + .tgl-btn:before {
-	 transform: skew(10deg);
-	 display: inline-block;
-	 transition: all 0.2s ease;
-	 width: 100%;
-	 text-align: center;
-	 position: absolute;
-	 line-height: 2em;
-	 font-weight: bold;
-	 color: #fff;
-	 text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
-}
- .tgl-skewed + .tgl-btn:after {
-	 left: 100%;
-	 content: attr(data-tg-on);
-}
- .tgl-skewed + .tgl-btn:before {
-	 left: 0;
-	 content: attr(data-tg-off);
-}
- .tgl-skewed + .tgl-btn:active {
-	 background: rgb(95, 78, 78);
-}
- .tgl-skewed + .tgl-btn:active:before {
-	 left: -10%;
-}
- .tgl-skewed:checked + .tgl-btn {
-	 background: blueviolet;
-}
- .tgl-skewed:checked + .tgl-btn:before {
-	 left: -100%;
-}
- .tgl-skewed:checked + .tgl-btn:after {
-	 left: 0;
-}
- .tgl-skewed:checked + .tgl-btn:active:after {
-	 left: 10%;
-}
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Josué Placido</title>
+		<link href="style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,700;1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+	</head>
+	<body>
+		<nav class="menu">
+			<button id="menu"></button>
+			<span>
+				<a href="#about">Contato</a>
+				<a href="#projects">Trabalhos</a>
+				<a href="#tools">Ferramentas</a>
+				<a href="#resumen">Currículo</a>
+			</span>
+		</nav>
+		<main>
+			<section id="about">
+				<main>
+					<img
+						class="foto"
+						src="http://GitHub.com/JosuePlacido.png"
+						width="175"
+						height="175"
+						alt="Foto do perfil"
+					/>
+					<h1>Josué Placido da Silveira Junior</h1>
+					<h3>Programador Fullstack</h3>
+					<footer>
+						<a
+							class="social-link fab fa-github-square fa-2x"
+							alt="Github"
+							href="https://github.com/josueplacido"
+						>
+						</a>
+						<a
+							class="social-link fas fa-envelope-square fa-2x"
+							alt="Gmail"
+							href="mailto:juplacido.jnr@gmail.com"
+						>
+						</a>
+						<a
+							class="social-link fab fa-microsoft fa-2x"
+							alt="Outlook"
+							href="mailto:ozzyplacidojunior@hotmail.com"
+						>
+						</a>
+						<a
+							class="social-link fab fa-linkedin fa-2x"
+							alt="Linkedin"
+							href="https://linkedin.com/josueplacido"
+						>
+						</a>
+						<a
+							class="social-link fab fa-facebook-square fa-2x"
+							alt="Linkedin"
+							href="https://www.facebook.com/josue.placido.3"
+						>
+						</a>
+						<a
+							class="social-link fab fa-instagram-square fa-2x"
+							alt="Linkedin"
+							href="https://www.instagram.com/josueplacido/"
+						>
+						</a>
+					</footer>
+				</main>
+				<aside>
+					<p>
+						Olá, meu nome é <b>Josué Placido da Silveira Junior</b>,
+					</p>
 
+					<p>
+						sou um Desenvolvedor Fullstack com experiência no
+						desenvolvimento de <b>APIs</b>,
+						<b>web-sites institucionais</b>, <b>loja virtual</b> e
+						<b>aplicativos móveis</b>.
+					</p>
 
-      @media(max-width: 600px){
-        .display-central {
-          grid-template-columns: 1fr;
-          grid-template-areas: "about "
-                                "formation"
-                                "stacks"
-                                " project";
-        }
-        .card{
-          border-left:none;
-        }
-        .footer{
-          grid-template-columns: 1fr;
-        }
-
-      }
-
-    </style>
-  </head>
-  <body>
-    <span class="mode">
-     <b>Resumido</b>
-    <input class="tgl tgl-skewed" checked id="cb3" type="checkbox" onchange="ToggleVisible()"/>
-    <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="cb3">
-    </span>
-    <header>
-      <h1>Josué Placido da Silveira Junior</h1>
-      <h2>Desenvolvedor Fullstack Web/Mobile.</h2>
-      <span>Ultima atualizacao: 07/09/2020</span>
-    </header>
-    <main class="flex-centro">
-      <div class="display-central">
-        <div class="display flex-centro about">
-          <img
-            class="foto"
-            src="http://GitHub.com/JosuePlacido.png"
-            width="150"
-            height="150"
-            alt="Foto do perfil"
-          />
-          <span>
-            <a href="http://GitHub.com/JosuePlacido.png" class="badge github"
-              ><i class="im im-github"></i></a>
-            <a
-              href="https://www.linkedin.com/in/josueplacido/"
-              class="badge linkedin"
-              ><i class="im im-linkedin"></i></a>
-              <a href="https://Github.com/JosuePlacido/josueplacido.github.io/raw/master/curriculo%20full.pdf" id="raw-url" role="button" class="btn btn-sm BtnGroup-item ">PDF Resumido</a>
-              <a href="https://Github.com/JosuePlacido/josueplacido.github.io/raw/master/curriculo%20resumido.pdf" id="raw-url" role="button" class="btn btn-sm BtnGroup-item ">PDF Completo</a>
-          </span>
-          <p>Sou desenvolvedor fullstack utilizando C# e .NET Core, e
-            estou expandindo meus horizontes para tecnologias como React/React Native
-             e typescript. Evoluir no desenvolvimento de testes automatizados
-             e posteriormente aprender sobre conteinarização (Docker).</p>
-          <div class="contact">
-            <i class="im im-mail"></i> ozzyplacidojunior@hotmail.com<br />
-            <i class="im im-whatsapp"></i> (45) 99109-1914<br />
-            <i class="im im-location"></i> Medianeira/PR<br />
-            <i class="im im-github"></i> Github.com/JosuePlacido<br/>
-            <i class="im im-linkedin"></i> Linkedin.com/in/josue-placido-da-silveira-junior-28a5941b4
-          </div>
-        </div>
-        <div class="stacks">
-          <h2 id="conhecimentos">Front-end</h2>
-          <article class="display card">
-                <h3>HTML<br/>
-                  <small>Estudo e utilização de tags semanticas e meta tags desde DEZ/2019</small>
-                </h3>
-				<h3>
-					CSS<br/>
-					<small>3 anos de experiência, utilizando LESS.</small>
-				</h3>
-              	<h3>Bootstrap<br/>
-					<small>Framework utilizado desde a graduação</small>
-              	</h3>
-              	<h3>Bootstrap<br/>
-					<small>Framework utilizado desde a graduação, utilizando desde 2016</small>
-              	</h3>
-				<h3>JavaScript (ECMS6)<br/>
-					<small>Utilizada em praticamente todos os projetos, desde JAN/2019</small>
-              	</h3>
-				<h3>TypeScript, React<br/>
-					<small>Estudada desde maio/2020, com o primeiro projeto iniciando em novembro/2020</small>
-              	</h3>
-          </article>
-          <h2 id="conhecimentos">Back-end</h2>
-          <article class="display card">
-				<h3>C#, Asp.Net Core, Entity Framework<br/>
-					<small> utilizada desde 2016 durante a graduação, TCC e em projetos web que necessitam de back-end.</small>
-              	</h3>
-				<h3>NodeJS, ECMS2017+<br/>
-					<small>Estudada desde maio/2020, com o primeiro projeto iniciando em novembro/2020</small>
-              	</h3>
-				<h3>Java<br/>
-					<small>Utilizada durante o estágio e aplicativos móveis 2 anos de experiência</small>
-              	</h3>
-          </article>
-          <h2 id="conhecimentos">Banco de dados</h2>
-          <article class="display card">
-				<h3>SQLServer(T-SQL)<br/>
-					<small>utilizada desde 2016 durante a graduação, TCC e em projetos web que necessitam de back-end.</small>
-              	</h3>
-				<h3>PostgreSQL (plpsql)<br/>
-					<small>Utilizada durante o estágio e 4 meses de experiência</small>
-              	</h3>
-				<h3>MySQL<br/>
-					<small>Utilizada durante a graduação</small>
-              	</h3>
-          </article>
-          <h2 id="conhecimentos">Mobile</h2>
-          <article class="display card">
-				<h3>Android Nativo - Java<br/>
-					<small>Utilizada nos primeiros projetos de aplicativo 1 ano de experiência</small>
-              	</h3>
-				<h3>React Native<br/>
-					<small>Estudada desde maio/2020, com o primeiro projeto iniciando em novembro/2020</small>
-              	</h3>
-          </article>
-          <h2 id="conhecimentos">Ferramentas</h2>
-          <article class="display card discard">
-				<h3>Git<br/>
-					<small>Utilizada em todos os projetos</small>
-              	</h3>
-				<h3>Azure DevOps<br/>
-					<small>Utilizada em projetos profissionais para scrum e repositorio</small>
-              	</h3>
-				<h3>Postman<br/>
-					<small>Utilizada para testa as apis de todos os projetos</small>
-              	</h3>
-				<h3>JIRA (Desenvovledor contribuidor)<br/>
-					<small>Utilizada durante o estágio e 4 meses de experiência</small>
-              	</h3>
-          </article>
-        </div>
-        <div class="formation">
-          <h2>Formação</h2>
-          <article class="display card">
-              <h3>
-                Ciência
-                da Computação
-                <br/>
-                <small>
-                  OUT/2012 - DEZ/2020
-                </small>
-              </h3>
-              <b>Universidade Tecnológica Federal do Paraná</b>
-          </article>
-          <article class="display card">
-              <h3>
-                Técnico
-              em informática
-                <br/>
-                <small>
-                  AGO/2009 - DEZ/2010
-                </small>
-              </h3>
-              <b>ETEC Dr. Demétrio Azevedo Junior (Centro Paula Souza)</b>
-          </article>
-          <article class="display card">
-              <h3>
-                Ensino Médio Completo
-                <br/>
-                <small>
-                  JAN/2008 - DEZ/2010
-                </small>
-              </h3>
-              <b>EE Prof Jeminiano David Müzel</b>
-          </article>
-          <br/>
-        <h2 id="exper-ncia-profissional">Experência Profissional</h2>
-          <article class="display card">
-              <h3>
-                Desenvolvedor Fullstack
-                <br/>
-                <small>
-                  JAN/2020 - atual
-                </small>
-              </h3>
-              <h4>autônomo/empreendedor</h4>
-              <p>
-                Desenvolvimento de aplicativos web/mobile.<br/>
-                Fundando a própria empresa (Alternativa digital)
-              </p>
-              <footer><p>
-                Tecnologias utilizadas: C#, dotNet Core, HTML, CSS, Javascript,
-                Jquery, Git, Azure Devops.
-              </p>
-              </footer>
-          </article>
-          <article class="display card">
-              <h3>
-                Programador Java
-                <br/>
-                <small>
-                  FEV/2018 - JUN/2018
-                </small>
-              </h3>
-              <h4>JL Informática</h4>
-              <p>
-                Implementar funcionalidades e corrigir bugs nas aplicações Desktop do sistema.
-              </p>
-              <footer>
-                Tecnologias utilizadas: Java (versão 8), PostgreSQL, Git, Jira
-                  Software e JasperSoft (Relatórios)
-              </footer>
-          </article>
-          <article class="display card discard">
-              <h3>
-                Estagiário
-                <br/>
-                <small>
-                  Nov/2013 - DEZ/2013
-                </small>
-              </h3>
-              <h4>Secretaria municipal de educação de Medianeira</h4>
-              <p>
-                Manutenção e configuração dos laboratórios escolares do
-                ensino fundamental.
-              </p>
-              <footer><p>
-                Tecnologias utilizadas: Linux.
-              </p>
-              </footer>
-          </article>
-          <article class="display card discard">
-              <h3>
-                Monitor
-                <br/>
-                <small>
-                  FEV/2012 - JUN/2012
-                </small>
-              </h3>
-              <h4>Faculdade de Ciências Sociais e Agrárias de Itapeva (FAIT)</h4>
-              <p>
-                  Gerenciamento, Manutenção e configuração dos computadores e
-                  outros dispositivos.
-              </p>
-          </article>
-          <article class="display card discard">
-              <h3>
-                Auxiliar de escritório.
-                <br/>
-                <small>
-                  JAN/2011 - MAI/2011
-                </small>
-              </h3>
-              <h4>Agência Magne RH</h4>
-              <p>
-                  Atendimento ao público, design de artes e panfletos, serviços administrativos
-              </p>
-          </article>
-        </div>
-        <div class="projects">
-          <h2 id="conhecimentos">Projetos</h2>
-          <article class="display card">
-              <h3>
-                Aplicativo: SCORE IBOV
-                <br/>
-                <small>
-                  Android: Lançado,Iphone: Desenvolvendo
-                </small>
-              </h3>
-              <h4>Alternativa Digital</h4>
-              <p>
-                Aplicativo mobile que faz uma análise fundamentalista
-                das ações presentes na IBOVESPA, atribuindo-a um <i>Score</i>
-                com base na comparação de seus indicadores de rendimento com os
-                das cnocorrentes de seu setor.
-              </p>
-              <footer>
-                <p>Site: <a href="https://play.google.com/store/apps/details?id=com.alternativadigital.scoreibov">SCORE Ibov</a></p>
-                <p>Stack: Android nativo com Java.</p>
-              </footer>
-          </article>
-          <article class="display card">
-              <h3>
-                Site E-Commerce Ótica
-                <br/>
-                <small>
-                  Atualizando
-
-                </small>
-              </h3>
-              <h4>Ótica Boa Vista</h4>
-              <p>
-                Aplicação web que contém as seguintes funcionalidades:
-                <ul>
-                  <li>Gerenciamento de produtos, marcas, promoções, cupons de desconto e categoria;</li>
-                  <li>Atualização de venda (PagSeguro);</li>
-                  <li>Notificações por email;</li>
-                  <li>Captação de emails;</li>
-                  <li>Salvar e alterar Templates de emails;</li>
-                  <li>Gerar relatório básico de venda;</li>
-                  <li>Configurar visual dos banners e alerta de newsletter.</li>
-                </ul>
-                Integrações:
-                <ul>
-                  <li>PagSeguro</li>
-                  <li>Correios</li>
-                  <li>Google analytics</li>
-                  <li>Pixel do facebok <small>(am andamento)</small></li>
-                  <li>Sistema interno da empresa <small>(am andamento)</small></li>
-                  <li>Login: Google</li>
-                  <li>Login: Facebook,instagram <small>(am andamento)</small></li>
-                  <li>Correios</li>
-                </ul>
-              </p>
-              <footer>
-                <p>Site: <a href="http://www.oticaboavista.com/">Ótica Boa Vista</a></p>
-                <p>Stack: Asp.Net Core 2.x, SQL Server, jQuery, Bootstrap.</p>
-              </footer>
-          </article>
-          <article class="display card discard">
-              <h3>
-                Plataforma web para gamificação de aula.
-                <br/>
-                <small>
-                  Concluído e aprovado
-                </small>
-              </h3>
-              <h4>Trabalho entregue para avaliação de TCC na UTFPR.</h4>
-              <p>
-                Aplicativo web que suporta gamificação de aula
-                funcionalidades e conceitos de <i>gamification</i> aplicados:
-                <ul>
-                  <li>Cadastro de Disciplina, turmas, atividades,
-                     material de estudo e perguntas;</li>
-                  <li>Pontos de progresso, experiência, vida, energia;</li>
-                  <li>Representação do aluno (avatar);</li>
-                  <li>Imersão num mundo fictício (mapa da disciplina);</li>
-                  <li>Socialização (transações financeiras (moeda ficticia));</li>
-                  <li>Coleção e conquista (Selos de realizações/badges);</li>
-                  <li>Desafios e missões (Quizes interativos e questionários);</li>
-                  <li>Progressão (pontos deexperiencia e níveis dos avatares).</li>
-                </ul>
-                que faz uma análise fundamentalista
-                das ações presentes na IBOVESPA, atribuindo-a um <i>Score</i>
-                com base na comparação de seus indicadores de rendimento com os
-                das cnocorrentes de seu setor.
-              </p>
-              <footer>
-                <p>Repositorio: <a href="https://juzao.visualstudio.com/TCC">Azure Repos</a></p>
-                <p>Stack: Asp.Net Core 2.x, SQL Server, jQuery, Bootstrap.</p>
-              </footer>
-          </article>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-        <div class="display card">
-          <h3>Cursos</h3>
-          <ul>
-            <li>
-              Montagem e manutenção de microcomputadores
-              - Plenatec 2009
-            </li>
-          </ul>
-        </div>
-        <div class="display card">
-          <h3>Eventos</h3>
-          <ul>
-            <li>
-              Meditec V
-            </li>
-            <li>
-              Maratona de programação 2013
-            </li>
-          </ul>
-        </div>
-        <div class="display card">
-          <h3>Idiomas</h3>
-          <ul>
-            <li>
-              Português (nativo)
-            </li>
-            <li>
-              Inglês intermediário
-            </li>
-          </ul>
-        </div>
-    </footer>
-    <script>
-      function ToggleVisible(){
-        checkBox = document.getElementById('cb3');
-        display = checkBox.checked?'none':'block';
-        document.querySelectorAll('.discard').forEach((item) => item.style.display = display);
-      }
-    </script>
-  </body>
+					<p>
+						Que ama o que faz, e prioriza a eficiência e facilidade
+						de uso em seus projetos.
+					</p>
+				</aside>
+			</section>
+			<section id="projects">
+				<h2>Projetos profissionais</h2>
+				<article>
+					<main>
+						<h3>TorneiosFC</h3>
+						<h4>Aplicativo mobile com web site</h4>
+						<p>
+							Aplicativo voltado para
+							<b>gestores, jogadores e torcedores</b> do futebol
+							amador na região, pois sua principal função é de
+							facilitar o
+							<b>
+								gerenciamento e o compartilhamento das tabelas,
+								agenda de jogos e estatísticas coletivas e
+								individuais.
+							</b>
+						</p>
+						<span class="span-buttons">
+							<a
+								href="https://github.com/JosuePlacido/Keeper"
+								class="button"
+								><i class="fab fa-github"></i>Repositório</a
+							>
+						</span>
+					</main>
+					<aside></aside>
+				</article>
+				<article>
+					<main>
+						<picture>
+							<img
+								width="150"
+								height="150"
+								src="data:image/jpeg;base64,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"
+								alt="Score IBOV"
+								width="150"
+								height="100"
+							/>
+						</picture>
+						<h3>SCORE IBOV</h3>
+						<h4>Aplicativo android</h4>
+						<p>
+							Aplicativo voltado para
+							<b>investidores iniciantes</b> na bolsa brasileira,
+							pois sua principal função é de automatizar o
+							processo de <b>análise fundamentalista</b> das ações
+							presentes na <b>IBOVESPA</b>. E atribuir um
+							<i>Score</i> para cada ação com base na comparação
+							de seus <b>indicadores de rendimento</b> com os da
+							concorrência do setor.
+						</p>
+						<span class="span-buttons">
+							<a
+								href="https://play.google.com/store/apps/details?id=com.alternativadigital.scoreibov&hl=en_US&gl=US"
+								class="button"
+								><i class="fab fa-google-play"></i>Play Store</a
+							>
+						</span>
+					</main>
+					<aside>
+						<img
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/V-x6epb_g7qstpWPiTn0Jq6HOo6dQ2jCPaE13B8QXVCvC53IZefJ473LElJUz0XCsa9n=h375"
+							alt="#1. Score Ibov"
+							title="#1. Score Ibov"
+						/>
+						<img
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/NJw_rj91dLV_piwp1RSWod4qrBzZ179mOliTIHlQQyk109tJ7Pymd6eIAAjvQd1SNMZ3=h375"
+							alt="#2. Score Ibov"
+							title="#2. Score Ibov"
+						/>
+						<img
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/Y9pesUqvHlPaVwMHVpbgj-iP5VvqE09k9BMVdqAejh2W4XcAbq_kVJmt0YAp_XTOlCa5=h375"
+							alt="#3. Score Ibov"
+							title="#3. Score Ibov"
+						/>
+						<img
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/sF1NrC0J8U_RZRd3KTedHGlC1QF_Fmele3vPpaPVG0TkDczH0-x0tiAeCg_p4UF2wvM=h375"
+							alt="#4. Score Ibov"
+							title="#4. Score Ibov"
+						/>
+						<img
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/XQUV3_wxYV7vTiXTko2i9CeKTXq3QAGz_AtJvPDfBlwZ6itmiWmmbJsUYkGMLnLanCk=h375"
+							alt="#5. Score Ibov"
+							title="#5. Score Ibov"
+						/>
+						<imgv
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/BZapOM5uBHV3c0l-BSC9X_3BjsCkG0Pr11XuviGpFmZz-Uqj8J0cMMgHM3YXs5Fz_tI=h375"
+							alt="#6. Score Ibov"
+							title="#6. Score Ibov"
+						/>
+						<img
+							width="250"
+							height="450"
+							src="https://play-lh.googleusercontent.com/poobkbgDho6Aj8Aj-QpwZX6PO8T0bp5IQRJoB2lQevxVktkj0fBk2BrtvOokXEKA4Q=h375"
+							alt="#7. Score Ibov"
+							title="#7. Score Ibov"
+						/>
+					</aside>
+				</article>
+				<article>
+					<main>
+						<picture>
+							<img
+								width="400"
+								height="150"
+								src="https://www.oticaboavista.com/images/logo.jpg"
+								alt="Score IBOV"
+							/>
+						</picture>
+						<h3>Ótica Boa Vista Online</h3>
+						<h4>Site de e-commerce</h4>
+						<p>
+							Website que possibilita a compra dos produtos da
+							ótica, com suporte a
+							<b>login do Google</b>, que te
+							<b>notifica por email</b> conforme o
+							<em>Status</em> da venda, aceitando diversas formas
+							de pagamento via <b>PagSeguro</b>.
+						</p>
+						<p>
+							Além de contar com funcionalidades de avaliação,
+							lista de produtos favoritos e calculadora de frete
+							(correios)
+						</p>
+						<span class="span-buttons">
+							<a href="htttps://oticaboavista.com" class="button">
+								<i class="fas fa-world"></i>
+								Ver site
+							</a>
+						</span>
+					</main>
+					<aside>
+						<picture>
+							<img src="otica.gif" width="1200" height="550" />
+						</picture>
+					</aside>
+				</article>
+			</section>
+			<section id="tools">
+				<h2>Front-end</h2>
+				<div>
+					<article>
+						<header>HTML5</header>
+						<main>
+							Experiência com tags semânticas, atributos de
+							metadados e SEO
+						</main>
+						<footer>Avançado</footer>
+					</article>
+					<article>
+						<header>CSS</header>
+						<main>
+							Experiência com efeitos, filtros, recortes de
+							background e transformações
+						</main>
+						<footer>Avançado</footer>
+					</article>
+					<article>
+						<header>Bootstrap</header>
+						<main>
+							Experiência com os componentes, cutomização de
+							componentes. Experiência de 2 anos.
+						</main>
+						<footer>Intermediário</footer>
+					</article>
+					<article>
+						<header>jQuery</header>
+						<main>
+							Experiência com os componentes, cutomização de
+							componentes. Experiência de 2 anos.
+						</main>
+						<footer>Intermediário</footer>
+					</article>
+					<article>
+						<header>JavaScript (ECMS6, 7, 8, 9)</header>
+						<main>
+							Experiência com os componentes, cutomização de
+							componentes. Experiência de 2 anos.
+						</main>
+						<footer>Avançado</footer>
+					</article>
+					<article>
+						<header>React (Typescript)</header>
+						<main>
+							Estudando, utilizando e iniciando projetos. 4 meses
+							de trabalho.
+						</main>
+						<footer>Iniciante</footer>
+					</article>
+				</div>
+				<h2>Back-end</h2>
+				<div>
+					<article>
+						<header>C#, Asp.Net Core 2.1+</header>
+						<main>
+							Framework e linguagem usado na maioria dos projetos,
+							projetos como e-commerce, backends de mobile e APIs
+							Rest.
+						</main>
+						<footer>Avançado</footer>
+					</article>
+					<article>
+						<header>NodeJS, ECMS2017+</header>
+						<main>
+							Framework estudado superficialmente durante os
+							estudos de React
+						</main>
+						<footer>Estudando</footer>
+					</article>
+					<article>
+						<header>Java</header>
+						<main>
+							Desenvolvimento de aplicações desktop, e android
+							nativo.
+						</main>
+						<footer>Basico</footer>
+					</article>
+				</div>
+				<h2>Banco de dados</h2>
+				<div>
+					<article>
+						<header>SQL Server</header>
+						<main>
+							SGBD usado na maioria dos projetos, Experiência com
+							tables, subconsultas, funções, views, procedurest e
+							Types.
+						</main>
+						<footer>Intermediário</footer>
+					</article>
+					<article>
+						<header>PostgreSQL</header>
+						<main>
+							SGBD usado no estágio, Experiência com tables,
+							funções, views, procedurest e Types.
+						</main>
+						<footer>Básico</footer>
+					</article>
+					<article>
+						<header>MySQL</header>
+						<main>
+							Primeiro SGBD aprendido, e usado ocasionalmente
+							hoje. Experiência com Tables e Views.
+						</main>
+						<footer>Básico</footer>
+					</article>
+					<article>
+						<header>Entity Framework</header>
+						<main>
+							ORM mais usado, com vários bancos e em diferentes
+							versões como 5, 6, e Core. Experiência com
+							mapeamento, funções e views.
+						</main>
+						<footer>Avançado</footer>
+					</article>
+					<article>
+						<header>JPA Framework</header>
+						<main>
+							ORM usado em todos os projetos java, Experiência com
+							mapeamento, funções e views.
+						</main>
+						<footer>Basico</footer>
+					</article>
+					<article>
+						<header>Firebase NoSql</header>
+						<main>
+							Utilizado em alguns projetos, de uso simples.
+							Experiência em operações CRUD.
+						</main>
+						<footer>Iniciante</footer>
+					</article>
+				</div>
+				<h2>Mobile</h2>
+				<div>
+					<article>
+						<header>Java mobile</header>
+						<main>
+							Linguagem usada na publicação dos primeiros
+							aplicativos. Experiência com consulta de dados de
+							api e firebase.
+						</main>
+						<footer>Básico</footer>
+					</article>
+					<article>
+						<header>React Native</header>
+						<main>
+							Estudando e utilizando este framework, tendo já
+							desenvolvido consulta de dados de API, estilizando
+							com styled-components, telas com abas.
+						</main>
+						<footer>Básico</footer>
+					</article>
+				</div>
+			</section>
+			<section id="resumen">
+				<h2>Currículo</h2>
+				<article class="item">
+					<aside class="image">
+						<span></span>
+						MAR/2021 - ATÉ HOJE<br />
+					</aside>
+					<main class="details">
+						<h3>
+							Desenvolvedor .NET
+							<small>grupo TARS</small>
+						</h3>
+						<p>Desenvolvimento de API,</p>
+					</main>
+				</article>
+				<article class="item">
+					<aside class="image">
+						<span></span>
+						JAN/2020 - ATÉ HOJE<br />
+					</aside>
+					<main class="details">
+						<h3>
+							Desenvolvedor Fullstack
+							<small>autonômo/empreendedor</small>
+						</h3>
+						<p>
+							Desenvolvimento de aplicativos mobile consultando
+							dados do firebase que são atualizados diariamente
+							por uma cloud function, e-commerce com otimizações
+							de desempenho e CEO, integração com diversas APIs
+							como Correios e PagSeguro, login externo, e criação
+							de painel de administração.
+						</p>
+					</main>
+				</article>
+				<article class="item">
+					<aside class="image">
+						<span></span>
+						FEV/2018 - JUN/2018
+					</aside>
+					<main class="details">
+						<h3>
+							Programador Java
+							<small>JL Informática</small>
+						</h3>
+						<p>
+							Desenvolvimento de relatórios, consultando uma
+							função em PostgreSQL, funcionalidades em aplicações
+							desktop, geração de relatório com JasperSoft, e
+							ajustando o visual (swingx).
+						</p>
+					</main>
+				</article>
+				<article class="item">
+					<aside class="image">
+						<span></span>
+						Nov/2013 - DEZ/2013
+					</aside>
+					<main class="details">
+						<h3>
+							Estagiário
+							<small>
+								Secretaria municipal de educação de Medianeira
+							</small>
+						</h3>
+						<p>
+							Manutenção e configuração dos laboratórios escolares
+							do ensino fundamental.
+						</p>
+					</main>
+				</article>
+				<article class="item">
+					<aside class="image">
+						<span></span>
+						FEV/2012 - JUN/2012
+					</aside>
+					<main class="details">
+						<h3>
+							Monitor
+							<small>
+								Faculdade de Ciências Sociais e Agrárias de
+								Itapeva (FAIT)
+							</small>
+						</h3>
+						<p>
+							Gerenciamento, Manutenção e configuração dos
+							computadores e outros dispositivos.
+						</p>
+					</main>
+				</article>
+				<article class="item">
+					<aside class="image">
+						<span></span>
+						JAN/2011 - MAI/2011
+					</aside>
+					<main class="details">
+						<h3>
+							Auxiliar de escritório.
+							<small>Agência Magne RH</small>
+						</h3>
+						<p>
+							Atendimento ao público, design de artes e panfletos,
+							serviços administrativos
+						</p>
+					</main>
+				</article>
+				<h2>Formação</h2>
+				<div class="formation-panel">
+					<article class="formation-item">
+						<header>
+							<img alt="UTFPR" src="utfpr.png" />
+						</header>
+						<main>
+							<h3>Ciência da Computação</h3>
+							<p>Universidade Tecnológica Federal do Paraná</p>
+						</main>
+						<footer>OUT/2012 - DEZ/2020</footer>
+					</article>
+					<article class="formation-item">
+						<header>
+							<img alt="Centro Paula Souza" src="etec.png" />
+						</header>
+						<main>
+							<h3>Técnico em informática</h3>
+							<p>
+								ETEC Dr. Demétrio Azevedo Junior (Centro Paula
+								Souza)
+							</p>
+							<p></p>
+						</main>
+						<footer>AGO/2009 - DEZ/2010</footer>
+					</article>
+				</div>
+			</section>
+			<h2>Idiomas</h2>
+			<section id="languages">
+				<article class="language brazil">
+					<h3>Português Nativo</h3>
+					<p></p>
+				</article>
+				<article class="language usa">
+					<h3>Inglês intermediário</h3>
+					<p>
+						Leitura, escrita, fala e escuta de frases curtas e
+						simples.
+					</p>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<h2>Vamos trabalhar juntos!</h2>
+			<h3>
+				Tem um projeto/trabalhos que gostaria de discutir? entre em
+				contato
+			</h3>
+			<div>
+				<a
+					class="footer-social fab fa-github fa-2x"
+					alt="Github"
+					href="https://github.com/josueplacido"
+				>
+				</a>
+				<a
+					class="footer-social fas fa-envelope fa-2x"
+					alt="Gmail"
+					href="mailto:juplacido.jnr@gmail.com"
+				>
+				</a>
+				<a
+					class="footer-social fab fa-microsoft fa-2x"
+					alt="Outlook"
+					href="mailto:ozzyplacidojunior@hotmail.com"
+				>
+				</a>
+				<a
+					class="footer-social fab fa-linkedin fa-2x"
+					alt="Linkedin"
+					href="https://linkedin.com/josueplacido"
+				>
+				</a>
+				<a
+					class="footer-social fab fa-facebook fa-2x"
+					alt="Linkedin"
+					href="https://www.facebook.com/josue.placido.3"
+				>
+				</a>
+				<a
+					class="footer-social fab fa-instagram fa-2x"
+					alt="Linkedin"
+					href="https://www.instagram.com/josueplacido/"
+				>
+				</a>
+				<a
+					class="footer-social fab fa-whatsapp fa-2x"
+					alt="Linkedin"
+					href="https://api.whatsapp.com/send?phone=991091914"
+				>
+				</a>
+			</div>
+			<span>© 2021 JosuéPlacido, todos os direitos reservados</span>
+			<p>Ultima atualização FEV/2021</p>
+		</footer>
+		<script>
+			document.addEventListener("scroll", (evt) => {
+				const menu = document.querySelector(".menu");
+				if (scrollY >= 35) {
+					menu.classList.add("sticky-menu");
+				} else if (scrollY < 15) {
+					menu.classList.remove("sticky-menu");
+				}
+			});
+			document.querySelector("#menu").addEventListener("click", (evt) => {
+				const menu = document.querySelector(".menu");
+				if (menu.classList.contains("show")) {
+					menu.classList.remove("show");
+				} else {
+					menu.classList.add("show");
+				}
+			});
+		</script>
+	</body>
 </html>
