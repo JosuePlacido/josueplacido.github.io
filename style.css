@@ -296,6 +296,9 @@ h2 {
 	background: linear-gradient(180deg, rgba(131, 58, 180, 0) 17%, var(--color-secondary-dark) 100%);
 	clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
 }
+#resumen .item:first-child:before {
+	content: 'teste';
+}
 
  #resumen .item {
  	display: flex;
@@ -376,10 +379,11 @@ h2 {
  	height: 100%;
  	border-left: 3px solid var(--text-color-primary);
  	position: absolute;
- 	top: 50%;
+ 	top: 0;
 	left: 0;
  	z-index: -1;
  }
+
  #resumen .formation-panel{
 	 display: flex;
 	 padding: 1.4rem;
