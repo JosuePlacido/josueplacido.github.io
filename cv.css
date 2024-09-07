@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Times New Roman', serif;
+	line-height: 1.5;
+	color: #000;
+	background-color: #fff;
+	padding: 20px;
+	font-size: 12pt;
+}
+p.date {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+dl dt {
+	margin-top: 8px;
+	font-weight: bold;
+}
+/* Estrutura do Currículo */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.header h1 {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.header p {
+	font-size: 12pt;
+}
+
+/* Seções */
+.section {
+	margin-bottom: 15px;
+}
+
+.section h2 {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #000;
+	padding-bottom: 2px;
+}
+.section h3 {
+	margin-top: 10px;
+	font-size: 13pt;
+	font-weight: bold;
+}
+.section p,
+.section ul {
+	font-size: 11pt;
+}
+
+.section ul {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+
+/* Experiência */
+.experience-item {
+	margin-bottom: 10px;
+}
+.experience-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.experience-item p {
+	margin-top: 8px;
+}
+.experience-item h3 {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.experience-item .date {
+	font-size: 10pt;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+
+/* Links */
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Footer */
+.footer {
+	text-align: center;
+	font-size: 10pt;
+	margin-top: 20px;
+	color: #000;
+}
+
+/* Estilos de Impressão */
+@media print {
+	body {
+		padding: 0;
+	}
+
+	.container {
+		padding: 20px;
+		page-break-inside: avoid;
+	}
+
+	.section {
+		page-break-inside: avoid;
+	}
+}
