@@ -70,8 +70,9 @@ document.addEventListener('mousemove', function (e) {
 document.addEventListener('mousemove', function (e) {
 	const x = e.clientX;
 	const y = e.clientY;
+	const color = body.classList.contains('dark') ? '#cfafff35' : '#30005035';
 
-	main.style.background = `radial-gradient(600px at ${x}px ${y}px, #cfafff35, transparent 80%)`;
+	main.style.background = `radial-gradient(600px at ${x}px ${y}px, ${color}, transparent 80%)`;
 });
 const body = document.querySelector('body');
 function changeBackgroundBody(evt) {

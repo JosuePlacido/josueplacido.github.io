@@ -399,7 +399,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	padding: 1rem;
-	border: 1px solid var(--text-color-primary);
+	border: 1px solid var(--color-secondary-dark);
 	border-radius: 8px;
 	transition: transform 0.5s, border 0.5s;
 	background-color: #300050aa;
@@ -407,6 +407,7 @@ h2 {
 	min-width: 150px;
 }
 .light #tools li {
+	border: 1px solid var(--text-color-primary);
 	background-color: #cfafffaa;
 }
 #tools li:hover {
