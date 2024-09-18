@@ -75,9 +75,10 @@ document.addEventListener('mousemove', function (e) {
 });
 const body = document.querySelector('body');
 function changeBackgroundBody(evt) {
+	console.log(evt.target.scrollTop);
 	if (
 		(evt.target.scrollTop < 600 || evt.target.scrollTop > 3000) &&
-		body.classList.length === 0
+		!body.classList.contains('with-img')
 	) {
 		body.classList.add('with-img');
 		return;
@@ -111,4 +112,22 @@ function changeLanguage() {
 	body.classList.remove('ptbr');
 	buttonLanguage.classList.remove('ptbr');
 	buttonLanguage.classList.add('enus');
+}
+const buttonTheme = document.querySelector(`#theme`);
+function changeTheme() {
+	if (buttonTheme.classList.contains('dark')) {
+		body.classList.remove('dark');
+		body.classList.add('light');
+		buttonTheme.classList.remove('fa-sun');
+		buttonTheme.classList.remove('dark');
+		buttonTheme.classList.add('fa-moon');
+		buttonTheme.classList.add('light');
+		return;
+	}
+	body.classList.add('dark');
+	body.classList.remove('light');
+	buttonTheme.classList.remove('fa-moon');
+	buttonTheme.classList.remove('light');
+	buttonTheme.classList.add('fa-sun');
+	buttonTheme.classList.add('dark');
 }
