@@ -31,29 +31,36 @@
 			rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav class="menu">
-			<button id="menu"></button>
-			<button id="version">Resumo</button>
-			<span>
-				<a href="#about">Contato</a>
-				<a href="#resumen">Experiência</a>
-				<a href="#projects">Projetos</a>
-				<a href="#academic">Estudos</a>
-				<a href="#tools">Ferramentas</a>
-			</span>
-		</nav>
+	<body class="with-img enus">
 		<main>
-			<section id="about">
+			<nav class="menu">
+				<button id="menu">Trocar</button>
+				<span>
+					<a href="#about">
+						Josué Placido da Silveira Junior<br />
+						<small class="ptbr">Desenvolvedor Fullstack</small>
+						<small class="enus">Fullstack developer</small>
+					</a>
+					<a href="#projects" class="ptbr">Projetos</a>
+					<a href="#projects" class="enus">Projects</a>
+					<a href="#resumen" class="ptbr">Experiência</a>
+					<a href="#resumen" class="enus">Experience</a>
+					<a href="#academic" class="ptbr">Estudos</a>
+					<a href="#academic" class="enus">Studies</a>
+					<button id="language" class="enus" onclick="changeLanguage()"></button>
+				</span>
+			</nav>
+			<section id="about" class="hidden">
 				<main>
 					<img
 						class="foto"
 						src="http://GitHub.com/JosuePlacido.png"
-						width="175"
-						height="175"
+						width="300"
+						height="300"
 						alt="Foto do perfil" />
 					<h1>Josué Placido da Silveira Junior</h1>
-					<h3>Programador Fullstack</h3>
+					<h3 class="ptbr">Desenvolvedor Fullstack</h3>
+					<h3 class="enus">Fullstack Developer</h3>
 					<footer>
 						<a
 							class="social-link fab fa-github-square fa-2x"
@@ -78,155 +85,157 @@
 					</footer>
 				</main>
 				<aside>
-					<p>
+					<p class="ptbr">
 						Sou um Desenvolvedor Fullstack com experiência no desenvolvimento de
 						<b>APIs</b>, <b>web-sites institucionais</b>, <b>loja virtual</b> e
 						<b>aplicativos móveis</b>.
 					</p>
-					<p>
-						Trabalho priorizando organização, eficiência e na experiÊncia do usuário
-						final
+					<p class="enus">
+						I am a Fullstack Developer with experience in developing
+						<b>APIs</b>, <b>institutional websites</b>, <b>virtual stores</b>, and
+						<b>mobile applications</b>.
 					</p>
-					<p>
+					<p class="ptbr">
+						Trabalho priorizando organização, eficiência e na experiência do usuário
+						final.
+					</p>
+					<p class="enus">
+						I work prioritizing organization, efficiency, and the final user experience.
+					</p>
+					<p class="ptbr">
 						Esta é uma versão completa e com algumas "aventuras" com CSS. Caso queira
 						uma
 						<a href="/cv.html">versão mais concisa clique aqui </a>.
 					</p>
+					<p class="enus">
+						This is a complete version with some "adventures" with CSS. If you want a
+						<a href="/cv.html">more concise version click here </a>.
+					</p>
 				</aside>
-			</section>
-			<section id="resumen">
-				<h2>Experiência profissional</h2>
-				<article class="item">
-					<aside class="image">
-						<span></span>
-						<label>MAR/2021 - ABRL/2024</label>
-					</aside>
-					<main class="details">
-						<h3>
-							Desenvolvedor fullstack .NET
-							<small>TARS</small>
-						</h3>
-						<p>
-							Manutenção e resolução de bugs e encontr alternativas para problemas
-							externos para o sistema interno do group
-							<a href="https://www.solintel.com.br/?">Solintel</a>, um grande sistema
-							implementado com <b>ASP.NET MVC 5</b>, <b>PostgreSQL</b>,
-							<b>KnockoutJS</b> com mais 8 milhõess de linha de codigo, milhoes de
-							registros e mais de 120 tabelas no banco. Responsavel por fazer gestão
-							de acesso, RH, controle financeiro, emissão de nota, integração com
-							agencias governamentais, etc.
-						</p>
-						<p>
-							Inlcuindo um
-							<a href="https://cliente.solintel.com.br/Account/Login?ReturnUrl=%2F">
-								Portal do cliente</a
-							>, para os clientes das empresas do grupo, atendendo cliente em todos
-							estados do Brasil. Que contribui aplicando responsividade a todo o site
-							sanando a reclamação mais comum dos usuários. Também fui responsavel por
-							desenvolver um versão sucessora desse Portal, com api e site totalmente
-							separados do Sistema Interno.
-						</p>
-						<p>
-							Utilizando <b>NodaJS</b>, <b>React</b>. Para melhorar a experiência dos
-							usuários. O primeiro projeto que tive acesso até então que implementou
-							testes unitários e de integração (todos na API).
-						</p>
-					</main>
-				</article>
-				<article class="item">
-					<aside class="image">
-						<span></span>
-						<label>JAN/2020 - FEV/2021 - JUN/2024</label>
-					</aside>
-					<main class="details">
-						<h3>
-							Desenvolvedor Fullstack
-							<small>autonômo/empreendedor</small>
-						</h3>
-						<p>
-							Desenvolvimento de diversos aplicativos mobile e web commerce, os
-							projetos de maior destaque estão descritos na seção de
-							<a href="#projects">Projetos</a>
-						</p>
-					</main>
-				</article>
-				<article class="item">
-					<aside class="image">
-						<span></span>
-						<label>FEV/2018 - JUN/2018</label>
-					</aside>
-					<main class="details">
-						<h3>
-							Programador Java
-							<small>JL Informática</small>
-						</h3>
-						<p>
-							Desenvolvimento de relátorios (Java, JasperSoft) atráves de consultas em
-							PostgreSQL, correcções e aprimoramentos aplicações desktop (TERMINAIS DE
-							ATENDIMENTO, PONTO DE VENDA), correcções visuais e adição de
-							documentação a conteúdo que não tinha. Para um sistema de gestão
-							completo que tinha como principais clientes os
-							<a href="https://www.itaipuland.com.br/">Itaipuland Hot Park</a>
-							e <b>Rio Water Planet</b> na época.
-						</p>
-						<p>Além do conhecimento em java que foi amplamente aprimorado, aq</p>
-					</main>
-				</article>
-				<article class="item full">
-					<aside class="image">
-						<span></span>
-						<label>Nov/2013 - DEZ/2013</label>
-					</aside>
-					<main class="details">
-						<h3>
-							Estagiário
-							<small> Secretaria municipal de educação de Medianeira </small>
-						</h3>
-						<p>
-							Manutenção e configuração dos laboratórios escolares do ensino
-							fundamental. Correção e configuração das máquinas que utilizavam Linux
-							Educacional nas escolas gerenciadas pela prefeitura
-						</p>
-					</main>
-				</article>
-				<article class="item full">
-					<aside class="image">
-						<span></span>
-						<label>FEV/2012 - JUN/2012</label>
-					</aside>
-					<main class="details">
-						<h3>
-							Monitor
-							<small>
-								Faculdade de Ciências Sociais e Agrárias de Itapeva (FAIT)
-							</small>
-						</h3>
-						<p>
-							Suporte técnico, gerenciamento, manutenção e configuração dos
-							computadores e outros dispositivos.
-						</p>
-					</main>
-				</article>
-				<article class="item full">
-					<aside class="image">
-						<span></span>
-						<label>JAN/2011 - MAI/2011</label>
-					</aside>
-					<main class="details">
-						<h3>
-							Auxiliar de escritório.
-							<small>Agência Magne RH</small>
-						</h3>
-						<p>
-							Atendimento ao público, design de artes e panfletos, serviços
-							administrativos.
-						</p>
-					</main>
-				</article>
+				<span>
+					<ol id="tools">
+						<li>
+							<img width="40" height="40" src="images/js.svg" alt="" />
+							<span class="ptbr">Javascript</span>
+							<span class="enus">Javascript</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/c-sharp.svg" alt="" />
+							<span class="ptbr">C#</span>
+							<span class="enus">C#</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/ts.svg" alt="" />
+							<span class="ptbr">Typescript</span>
+							<span class="enus">Typescript</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/nodejs.svg" alt="" />
+							<span class="ptbr">NodeJS</span>
+							<span class="enus">NodeJS</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/postgresql.svg" alt="" />
+							<span class="ptbr">PostgreSQL</span>
+							<span class="enus">PostgreSQL</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/reactjs.svg" alt="" />
+							<span class="ptbr">ReactJS</span>
+							<span class="enus">ReactJS</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/react-native.svg" alt="" />
+							<span class="ptbr">React Native</span>
+							<span class="enus">React Native</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/html.svg" alt="" />
+							<span class="ptbr">HTML5</span>
+							<span class="enus">HTML5</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/css.svg" alt="" />
+							<span class="ptbr">CSS3</span>
+							<span class="enus">CSS3</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/git.svg" alt="" />
+							<span class="ptbr">GIT</span>
+							<span class="enus">GIT</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/vscode.svg" alt="" />
+							<span class="ptbr">VSCode</span>
+							<span class="enus">VSCode</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/sql-server.svg" alt="" />
+							<span class="ptbr">SQL Server</span>
+							<span class="enus">SQL Server</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/dotnet.svg" alt="" />
+							<span class="ptbr">.NET</span>
+							<span class="enus">.NET</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/github.svg" alt="" />
+							<span class="ptbr">Github</span>
+							<span class="enus">Github</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/docker.svg" alt="" />
+							<span class="ptbr">Docker</span>
+							<span class="enus">Docker</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/jquery.svg" alt="" />
+							<span class="ptbr">jQuery</span>
+							<span class="enus">jQuery</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/ef.png" alt="" />
+							<span class="ptbr">EntityFramework</span>
+							<span class="enus">EntityFramework</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/ko.png" alt="" />
+							<span class="ptbr">KnockoutJS</span>
+							<span class="enus">KnockoutJS</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/bootstrap.svg" alt="" />
+							<span class="ptbr">Bootstrap</span>
+							<span class="enus">Bootstrap</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/hg.svg" alt="" />
+							<span class="ptbr">Mercurial</span>
+							<span class="enus">Mercurial</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/mysql.svg" alt="" />
+							<span class="ptbr">MySQL</span>
+							<span class="enus">MySQL</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/firebase.svg" alt="" />
+							<span class="ptbr">Firebase</span>
+							<span class="enus">Firebase</span>
+						</li>
+						<li>
+							<img width="40" height="40" src="images/java.svg" alt="" />
+							<span class="ptbr">Java</span>
+							<span class="enus">Java</span>
+						</li>
+					</ol>
+				</span>
 			</section>
 			<section id="projects">
-				<h2>Projetos profissionais</h2>
-				<article>
+				<h2 class="ptbr">Projetos profissionais</h2>
+				<h2 class="enus">Professional Projects</h2>
+				<article class="hidden">
 					<main>
 						<header>
 							<picture>
@@ -239,33 +248,44 @@
 									height="100" />
 							</picture>
 							<div>
-								<h3>SCORE IBOV</h3>
-								<h4>Aplicativo android</h4>
-								<h5>ONLINE</h5>
+								<h3 class="ptbr">SCORE IBOV</h3>
+								<h3 class="enus">SCORE IBOV</h3>
+								<h4 class="ptbr">Aplicativo android</h4>
+								<h4 class="enus">Android application</h4>
+								<h5 class="ptbr">ONLINE</h5>
+								<h5 class="enus">ONLINE</h5>
 							</div>
 						</header>
-						<p>
+						<p class="ptbr">
 							Aplicativo voltado para
 							<b>investidores iniciantes</b> na bolsa brasileira, pois sua principal
 							função é de automatizar o processo de <b>análise fundamentalista</b> das
-							ações presentes na <b>IBOVESPA</b>. E atribuir um <i>Score</i> para cada
-							ação com base na comparação de seus <b>indicadores de rendimento</b> com
-							os da concorrência do setor.
+							ações presentes na <b>IBOVESPA</b>.
 						</p>
-						<p>
-							Desenvolvido inicialmente em android nativo (Java 8), e posteriormente
-							migrado para react-native, para facilitar o lançamento para plataforma
-							Apple. backend se resume a um banco
-							<b>firebase</b>, atualização diária atráves das
-							<b>firebase cloud functions</b>.
+						<p class="enus">
+							Application aimed at
+							<b>beginner investors</b> in the Brazilian stock market, as its main
+							function is to automate the process of <b>fundamental analysis</b> of
+							the stocks present in <b>IBOVESPA</b>.
 						</p>
-						<span class="span-buttons">
+						<span class="wrapper-tecs">
+							<img src="images/android.svg" alt="" title="Androind Nativo" />
+							<img src="images/java.svg" alt="" title="Java" />
+							<img src="images/firebase.svg" alt="" title="Firebase" />
+							<img src="images/js.svg" alt="" title="Javascript" />
+							<img src="images/react-native.svg" alt="" title="React native" />
+							<img src="images/ts.svg" alt="" title="Typescript" />
+							<img src="images/git.svg" alt="" title="GIT" />
+							<img src="images/azure-devops.svg" alt="" title="Azure DevOPS" />
+							<img src="images/github.svg" class="github" alt="" title="GITHUB" />
+						</span>
+						<footer class="span-buttons">
 							<a
 								href="https://play.google.com/store/apps/details?id=com.alternativadigital.scoreibov&hl=en_US&gl=US"
 								class="button"
 								><i class="fab fa-google-play"></i>Play Store</a
 							>
-						</span>
+						</footer>
 					</main>
 					<aside>
 						<img
@@ -312,7 +332,7 @@
 							title="#7. Score Ibov" />
 					</aside>
 				</article>
-				<article>
+				<article class="hidden">
 					<main>
 						<header>
 							<picture>
@@ -323,27 +343,37 @@
 									alt="Ótica Boa Vista" />
 							</picture>
 							<div>
-								<h3>Ótica Boa Vista</h3>
-								<h4>Site de e-commerce</h4>
-								<h5>ENCERRADO</h5>
+								<h3 class="ptbr">Ótica Boa Vista</h3>
+								<h3 class="enus">Ótica Boa Vista</h3>
+								<h4 class="ptbr">Site de e-commerce</h4>
+								<h4 class="enus">E-commerce website</h4>
+								<h5 class="ptbr">ENCERRADO</h5>
+								<h5 class="enus">CLOSED</h5>
 							</div>
 						</header>
-						<p>
-							Site contava com suporte a
-							<b>login do Google</b>, que te <b>notifica por email</b> conforme o
-							<em>Status</em> da venda, aceitando diversas formas de pagamento via
-							<b>PagSeguro</b>. Além de contar com funcionalidades de avaliação, lista
-							de produtos favoritos e calculadora de frete (correios)
+						<p class="ptbr">
+							E-commerce para ótica que Site contava com: login do <b>Google</b>,
+							notifica por email, otimização de performance indexação no google,
+							Gateway de pagamento com <b>PagSeguro</b> entre outras.
 						</p>
-						<p>
-							O projeto exigiu otimizações de performance na web, html semântico,
-							tratamento de erros, leitura de logs, configurações de indexação no
-							google e boas práticas de SEO. Aplicação desenvolvida com
-							<b>.Net Core 2</b><b>jQuery</b> com <b>SQLServer</b>. Além de ter sido a
-							pirmeira expência com deploy, visto que nao exerci esta função em
-							nenhuma empresa.
+						<p class="enus">
+							E-commerce for optics that the site had: <b>Google</b> login, email
+							notification, performance optimization, Google indexing, payment gateway
+							with <b>PagSeguro</b> among others.
 						</p>
-						<span class="span-buttons">
+						<span class="wrapper-tecs">
+							<img src="images/jquery.svg" alt="" title="jQuery" />
+							<img src="images/js.svg" alt="" title="Javascript" />
+							<img src="images/dotnet.svg" alt="" title=".NET" />
+							<img src="images/sql-server.svg" alt="" title="SQL Server" />
+							<img src="images/ef.png" alt="" title="Entity Framework" />
+							<img src="images/bootstrap.svg" alt="" title="Bootstrap" />
+							<img src="images/css.svg" alt="" title="LESS" />
+							<img src="images/html.svg" alt="" title="HTML5" />
+							<img src="images/azure-devops.svg" alt="" title="Azure Devops" />
+							<img src="images/git.svg" alt="" title="GIT" />
+						</span>
+						<footer class="span-buttons">
 							<a
 								href="https://juzao.visualstudio.com/_git/%C3%93tica%20Boa%20Vista"
 								class="button">
@@ -359,7 +389,13 @@
 								</svg>
 								&nbsp; Ver repositório
 							</a>
-						</span>
+							<button
+								onclick="showModal('images/otica.gif')"
+								href="https://github.com/JosuePlacido/Keeper"
+								class="button modal">
+								<i class="fab fa-img"></i>Ver imagens
+							</button>
+						</footer>
 					</main>
 					<aside>
 						<picture>
@@ -367,39 +403,56 @@
 						</picture>
 					</aside>
 				</article>
-				<article class="full">
+				<a href="#" class="btn-link ptbr" onclick="showMore('projects','extras')"
+					>Ver mais</a
+				>
+				<a href="#" class="btn-link enus" onclick="showMore('projects','extras')"
+					>Show more</a
+				>
+				<article class="optional full hidden">
 					<main>
 						<header>
-							<picture>
-								<img source="torneios.png" />
-							</picture>
+							<span class="icon">T</span>
 							<div>
-								<h3>TorneiosFC</h3>
-								<h4>Aplicativo mobile com web site</h4>
-								<h5>Em desenvolvimento</h5>
+								<h3 class="ptbr">TorneiosFC</h3>
+								<h3 class="enus">TorneiosFC</h3>
+								<h4 class="ptbr">Aplicativo mobile com web site</h4>
+								<h4 class="enus">Mobile application with website</h4>
+								<h5 class="ptbr">Em desenvolvimento</h5>
+								<h5 class="enus">In development</h5>
 							</div>
 						</header>
-						<p>
+						<p class="ptbr">
 							Aplicativo voltado para
-							<b>gestores, jogadores e torcedores</b> do futebol amador na região,
-							pois sua principal função é de facilitar o
-							<b>
-								gerenciamento e o compartilhamento das tabelas, agenda de jogos e
-								estatísticas coletivas e individuais.
-							</b>
+							<b>gestores, jogadores e torcedores</b> de futebol amador, facilitando o
+							gerenciamento e o compartilhamento das tabelas, agenda de jogos e
+							estatísticas coletivas e individuais.
 						</p>
-						<p>
-							Aplicação também utilizada para estudar e aplicar na prática conceitos
-							de Deplot, arquitetura DDD, inicial implementado com <b>.Net Core 5</b>,
-							<b>ReactJs</b>, <b>SQL Server</b>. Em 2024 surgiu uma oportunidade de
-							retormar o proejto, pelo prazo estarei usando <b>NodeJS</b> para
-							agilizar a conclusão.
+						<p class="enus">
+							Application aimed at
+							<b>managers, players, and fans</b> of amateur football, facilitating the
+							management and sharing of tables, game schedules, and collective and
+							individual statistics.
 						</p>
-						<span class="span-buttons">
+						<span class="wrapper-tecs">
+							<img src="images/reactjs.svg" alt="" title="ReactJS" />
+							<img src="images/ts.svg" alt="" title="Typescript" />
+							<img src="images/postgresql.svg" alt="" title="PostgreSQL" />
+							<img src="images/nodejs.svg" alt="" title="NodeJS" />
+							<img src="images/git.svg" alt="" title="HTML5" />
+							<img src="images/github.svg" class="github" alt="" title="GITHUB" />
+						</span>
+						<footer class="span-buttons">
 							<a href="https://github.com/JosuePlacido/Keeper" class="button"
 								><i class="fab fa-github"></i>Repositório</a
 							>
-						</span>
+							<button
+								onclick="showModal('images/torneios.png')"
+								href="https://github.com/JosuePlacido/Keeper"
+								class="button modal">
+								<i class="fab fa-img"></i>Ver imagens
+							</button>
+						</footer>
 					</main>
 					<aside>
 						<picture>
@@ -408,279 +461,322 @@
 					</aside>
 				</article>
 			</section>
-			<section id="extras" class="full">
-				<h2>Outros repositórios</h2>
+			<section id="extras" class="optional full">
+				<h2 class="ptbr">Outros repositórios</h2>
+				<h2 class="enus">Other repositories</h2>
 				<span>
-					<article>
+					<article class="hidden">
 						<a href="https://github.com/JosuePlacido/Monorepo_rockektseat_ignite">
-							<header>Ignite Rocketseat</header>
+							<header class="ptbr">Ignite Rocketseat</header>
+							<header class="enus">Ignite Rocketseat</header>
 							<main>
-								Monorepo contendo todos projetos desenvolvidos durante os estudos
-								realizados na
-								<a href="https://www.rocketseat.com.br/">Rocketseat</a>
+								<p class="ptbr">
+									Monorepo contendo todos projetos desenvolvidos durante os
+									estudos realizados na
+									<a href="https://www.rocketseat.com.br/">Rocketseat</a>
+								</p>
+								<p class="enus">
+									Monorepo containing all projects developed during the studies
+									carried out at
+									<a href="https://www.rocketseat.com.br/">Rocketseat</a>
+								</p>
 							</main>
-							<footer>Desenvolvimento/Estudo em progresso</footer>
+							<footer class="ptbr">Desenvolvimento/Estudo em progresso</footer>
+							<footer class="enus">Development/Study in progress</footer>
 						</a>
 					</article>
 				</span>
 			</section>
+			<section id="resumen">
+				<h2 class="ptbr">Experiência profissional</h2>
+				<h2 class="enus">Professional Experience</h2>
+				<span>
+					<ol>
+						<li class="item hidden">
+							<div class="details">
+								<label>MAR/2021 - ABRL/2024</label>
+								<h3 class="ptbr">
+									Desenvolvedor fullstack .NET
+									<small>TARS</small>
+								</h3>
+								<h3 class="enus">
+									Fullstack .NET Developer
+									<small>TARS</small>
+								</h3>
+								<p class="ptbr">
+									Manutenção e resolução de bugs e encontr alternativas para
+									problemas externos para o sistema interno do group
+									<a href="https://www.solintel.com.br/?">Solintel</a>, um grande
+									sistema implementado com <b>ASP.NET MVC 5</b>,
+									<b>PostgreSQL</b>, <b>KnockoutJS</b> com mais 8 milhõess de
+									linha de codigo, milhoes de registros e mais de 120 tabelas no
+									banco. Responsavel por fazer gestão de acesso, RH, controle
+									financeiro, emissão de nota, integração com agencias
+									governamentais, etc.
+								</p>
+								<p class="enus">
+									Maintenance and bug fixing and finding alternatives for external
+									problems for the internal system of the group
+									<a href="https://www.solintel.com.br/?">Solintel</a>, a large
+									system implemented with <b>ASP.NET MVC 5</b>, <b>PostgreSQL</b>,
+									<b>KnockoutJS</b> with more than 8 million lines of code,
+									millions of records and more than 120 tables in the database.
+									Responsible for managing access, HR, financial control, invoice
+									issuance, integration with government agencies, etc.
+								</p>
+								<p class="ptbr">
+									Inlcuindo um
+									<a
+										href="https://cliente.solintel.com.br/Account/Login?ReturnUrl=%2F">
+										Portal do cliente</a
+									>, para os clientes das empresas do grupo, atendendo cliente em
+									todos estados do Brasil. Que contribui aplicando responsividade
+									a todo o site sanando a reclamação mais comum dos usuários.
+									Também fui responsavel por desenvolver um versão sucessora desse
+									Portal, com api e site totalmente separados do Sistema Interno.
+								</p>
+								<p class="enus">
+									Including a
+									<a
+										href="https://cliente.solintel.com.br/Account/Login?ReturnUrl=%2F">
+										Customer Portal</a
+									>, for the clients of the group companies, serving clients in
+									all states of Brazil. Which contributed by applying
+									responsiveness to the entire site, addressing the most common
+									user complaint. I was also responsible for developing a
+									successor version of this Portal, with API and site completely
+									separated from the Internal System.
+								</p>
+								<p class="ptbr">
+									Utilizando <b>NodaJS</b>, <b>React</b>. Para melhorar a
+									experiência dos usuários. O primeiro projeto que tive acesso até
+									então que implementou testes unitários e de integração (todos na
+									API).
+								</p>
+								<p class="enus">
+									Using <b>NodeJS</b>, <b>React</b>. To improve the user
+									experience. The first project I had access to that implemented
+									unit and integration tests (all in the API).
+								</p>
+							</div>
+						</li>
+						<li class="item hidden">
+							<div class="details">
+								<label>JAN/2020 - FEV/2021 - JUN/2024</label>
+								<h3 class="ptbr">
+									Desenvolvedor Fullstack
+									<small>autonômo/empreendedor</small>
+								</h3>
+								<h3 class="enus">
+									Fullstack Developer
+									<small>freelancer/entrepreneur</small>
+								</h3>
+								<p class="ptbr">
+									Desenvolvimento de diversos aplicativos mobile e web commerce,
+									os projetos de maior destaque estão descritos na seção de
+									<a href="#projects">Projetos</a>
+								</p>
+								<p class="enus">
+									Development of various mobile and web commerce applications, the
+									most prominent projects are described in the
+									<a href="#projects">Projects</a> section
+								</p>
+							</div>
+						</li>
+						<li class="item hidden">
+							<div class="details">
+								<label>FEV/2018 - JUN/2018</label>
+								<h3 class="ptbr">
+									Programador Java
+									<small>JL Informática</small>
+								</h3>
+								<h3 class="enus">
+									Java Programmer
+									<small>JL Informática</small>
+								</h3>
+								<p class="ptbr">
+									Desenvolvimento de relátorios (Java, JasperSoft) atráves de
+									consultas em PostgreSQL, correcções e aprimoramentos aplicações
+									desktop (TERMINAIS DE ATENDIMENTO, PONTO DE VENDA), correcções
+									visuais e adição de documentação a conteúdo que não tinha. Para
+									um sistema de gestão completo que tinha como principais clientes
+									os
+									<a href="https://www.itaipuland.com.br/">Itaipuland Hot Park</a>
+									e <b>Rio Water Planet</b> na época.
+								</p>
+								<p class="enus">
+									Development of reports (Java, JasperSoft) through PostgreSQL
+									queries, corrections and improvements to desktop applications
+									(SERVICE TERMINALS, POINT OF SALE), visual corrections and
+									addition of documentation to content that did not have it. For a
+									complete management system that had as main clients
+									<a href="https://www.itaipuland.com.br/">Itaipuland Hot Park</a>
+									and <b>Rio Water Planet</b> at the time.
+								</p>
+							</div>
+						</li>
+						<li class="item hidden optional full">
+							<div class="details">
+								<label>Nov/2013 - DEZ/2013</label>
+								<h3 class="ptbr">
+									Estagiário
+									<small> Secretaria municipal de educação de Medianeira </small>
+								</h3>
+								<h3 class="enus">
+									Intern
+									<small> Municipal Department of Education of Medianeira </small>
+								</h3>
+								<p class="ptbr">
+									Manutenção e configuração dos laboratórios escolares do ensino
+									fundamental. Correção e configuração das máquinas que utilizavam
+									Linux Educacional nas escolas gerenciadas pela prefeitura
+								</p>
+								<p class="enus">
+									Maintenance and configuration of elementary school laboratories.
+									Correction and configuration of machines that used Linux
+									Educacional in schools managed by the city hall
+								</p>
+							</div>
+						</li>
+						<li class="item hidden optional full">
+							<div class="details">
+								<label>FEV/2012 - JUN/2012</label>
+								<h3 class="ptbr">
+									Monitor
+									<small>
+										Faculdade de Ciências Sociais e Agrárias de Itapeva (FAIT)
+									</small>
+								</h3>
+								<h3 class="enus">
+									Monitor
+									<small>
+										Faculty of Social and Agrarian Sciences of Itapeva (FAIT)
+									</small>
+								</h3>
+								<p class="ptbr">
+									Suporte técnico, gerenciamento, manutenção e configuração dos
+									computadores e outros dispositivos.
+								</p>
+								<p class="enus">
+									Technical support, management, maintenance and configuration of
+									computers and other devices.
+								</p>
+							</div>
+						</li>
+						<li class="item hidden optional full">
+							<div class="details">
+								<label>JAN/2011 - MAI/2011</label>
+								<h3 class="ptbr">
+									Auxiliar de escritório.
+									<small>Agência Magne RH</small>
+								</h3>
+								<h3 class="enus">
+									Office Assistant.
+									<small>Agência Magne RH</small>
+								</h3>
+								<p class="ptbr">
+									Atendimento ao público, design de artes e panfletos, serviços
+									administrativos.
+								</p>
+								<p class="enus">
+									Public service, design of arts and pamphlets, administrative
+									services.
+								</p>
+							</div>
+						</li>
+					</ol>
+					<a href="#" class="btn-link ptbr" onclick="showMore('resumen')">Ver mais</a>
+					<a href="#" class="btn-link enus" onclick="showMore('resumen')">See more</a>
+				</span>
+			</section>
 			<section id="academic">
-				<h2>Formação Acadêmica e estudos</h2>
-				<div class="formation-panel">
-					<article class="formation-item">
-						<header>
-							<img alt="UTFPR" src="images/utfpr.png" />
+				<h2 class="ptbr">Formação Acadêmica e estudos</h2>
+				<h2 class="enus">Academic Background and Studies</h2>
+				<div>
+					<article class="utfpr hidden">
+						<header class="ptbr">
+							UTFPR - Universidade Tecnológica Federal do Paraná
+						</header>
+						<header class="enus">
+							UTFPR - Federal Technological University of Paraná
 						</header>
 						<main>
-							<h3>Ciência da Computação</h3>
-							<p>Universidade Tecnológica Federal do Paraná</p>
+							<p class="ptbr">Bacharelado em Ciência da Computação</p>
+							<p class="enus">Bachelor's Degree in Computer Science</p>
 						</main>
 						<footer>OUT/2012 - DEZ/2020</footer>
 					</article>
-					<article class="formation-item">
-						<header>
-							<img alt="UTFPR" src="images/rocketseat.png" />
-						</header>
+					<article class="rocketseat hidden">
+						<header class="ptbr">Rocketseat</header>
+						<header class="enus">Rocketseat</header>
 						<main>
-							<h3>ReactJS</h3>
-							<h3>React Native</h3>
-							<h3>NodeJS</h3>
+							<p class="ptbr">React Native</p>
+							<p class="enus">React Native</p>
+							<p class="ptbr">ReactJS (Concluindo)</p>
+							<p class="enus">ReactJS (Completing)</p>
 						</main>
-						<footer>DESDE 2021</footer>
+						<footer>2024</footer>
 					</article>
-					<article class="formation-item">
-						<header>
-							<img alt="Centro Paula Souza" src="images/etec.png" />
-						</header>
+					<article class="cps hidden">
+						<header class="ptbr">Centro Paula Souza</header>
+						<header class="enus">Centro Paula Souza</header>
 						<main>
-							<h3>Técnico em informática</h3>
-							<p>ETEC Dr. Demétrio Azevedo Junior (Centro Paula Souza)</p>
-							<p></p>
+							<p class="ptbr">Técnico em informática</p>
+							<p class="enus">Computer Technician</p>
 						</main>
-						<footer>AGO/2009 - DEZ/2010</footer>
+						<footer class="ptbr">
+							ETEC Dr. Demétrio Azevedo Junior - AGO/2009 - DEZ/2010
+						</footer>
+						<footer class="enus">
+							ETEC Dr. Demétrio Azevedo Junior - AUG/2009 - DEC/2010
+						</footer>
 					</article>
 				</div>
 			</section>
-			<section id="tools">
-				<h2>Linguagens, frameworks e ferramentas</h2>
+			<footer>
+				<h2 class="ptbr">Vamos trabalhar juntos!</h2>
+				<h2 class="enus">Let's work together!</h2>
+				<h3 class="ptbr">
+					Tem um projeto/trabalhos que gostaria de discutir? entre em contato
+				</h3>
+				<h3 class="enus">
+					Do you have a project/work you would like to discuss? get in touch
+				</h3>
 				<div>
-					<h3>Front-end</h3>
-					<article class="html">
-						<header>HTML5</header>
-						<main>
-							Experiência com tags semânticas, atributos de metadados, tags
-							especificas e SEO.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="css">
-						<header>CSS</header>
-						<main>
-							Experiência com efeitos, filtros, recortes de background e
-							transformações
-						</main>
-						<footer></footer>
-					</article>
-					<article class="js">
-						<header>JavaScript</header>
-						<main>
-							Principal linguagem que utilizo hoje, em todos ambientes atráves do
-							Typescript
-						</main>
-						<footer></footer>
-					</article>
-					<article class="react">
-						<header>ReactJS</header>
-						<main>
-							Principal framework, sendo estudado constantemente. Experiencia com
-							context API, estados, componenticação, variaveis de ambiente, conexao
-							com api e muito mais.
-						</main>
-						<footer>Iniciante</footer>
-					</article>
-					<article class="bs">
-						<header>Bootstrap</header>
-						<main>Experiência com os componentes, cutomização de componentes.</main>
-						<footer></footer>
-					</article>
-					<article class="jquery">
-						<header>jQuery</header>
-						<main>
-							Primeiro framework JS, uso extenso, criação de componentes, manuseio de
-							dom.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="ko">
-						<header>KnockoutJS</header>
-						<main>
-							Criar configurar os binds de variáveis, arrays, com pré-processamento
-							(computed) e interação no HTML DOM
-						</main>
-						<footer>Experiência de 3 anos</footer>
-					</article>
+					<a
+						class="footer-social fab fa-github fa-2x"
+						alt="Github"
+						href="https://github.com/josueplacido">
+					</a>
+					<a
+						class="footer-social fas fa-envelope fa-2x"
+						alt="Gmail"
+						href="mailto:juplacido.jnr@gmail.com">
+					</a>
+					<a
+						class="footer-social fab fa-microsoft fa-2x"
+						alt="Outlook"
+						href="mailto:ozzyplacidojunior@hotmail.com">
+					</a>
+					<a
+						class="footer-social fab fa-linkedin fa-2x"
+						alt="Linkedin"
+						href="https://linkedin.com/josueplacido">
+					</a>
+					<a
+						class="footer-social fab fa-whatsapp fa-2x"
+						alt="Linkedin"
+						href="https://api.whatsapp.com/send?phone=5545920009066">
+					</a>
 				</div>
-				<div>
-					<h3>Back-end</h3>
-					<article class="dotnet">
-						<header>C#, Asp.Net Core 2.1+</header>
-						<main>
-							Framework e linguagem usado na maioria dos projetos, projetos como
-							e-commerce, backends de mobile e APIs Rest.
-						</main>
-						<footer>Avançado</footer>
-					</article>
-					<article class="node">
-						<header>NodeJS, ECMS2017+</header>
-						<main>Framework estudado superficialmente durante os estudos de React</main>
-						<footer>Estudando</footer>
-					</article>
-					<article class="java">
-						<header>Java</header>
-						<main>Desenvolvimento de aplicações desktop, e android nativo.</main>
-						<footer>Basico</footer>
-					</article>
-				</div>
-				<div>
-					<h3>Banco de dados</h3>
-					<article class="pg">
-						<header>PostgreSQL</header>
-						<main>
-							SGBD usado em todos trabalhos e alguns projetos pessoais, Experiência
-							com tables, funções, views, procedure.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="mssql">
-						<header>SQL Server</header>
-						<main>
-							SGBD usado na maioria dos projetos pessoais, Experiência com tables,
-							subconsultas, funções, views, procedure e Types.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="ef">
-						<header>Entity Framework</header>
-						<main>
-							ORM mais usado, com vários bancos e em diferentes versões como 5, 6, e
-							Core. Experiência com mapeamento, funções e views.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="mysql">
-						<header>MySQL</header>
-						<main>
-							Primeiro SGBD aprendido, e usado ocasionalmente hoje. Experiência com
-							Tables e Views.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="firebase">
-						<header>Firebase</header>
-						<main>
-							Utilizado em alguns projetos, de uso simples. Experiência em operações
-							CRUD, criação de cloud function agendadas ou acessadas.
-						</main>
-						<footer></footer>
-					</article>
-				</div>
-				<div>
-					<h3>Mobile</h3>
-					<article class="rn">
-						<header>React Native</header>
-						<main>
-							Principal framework mobile, usado em todos os projetos mobile, tendo
-							experiencia com consulta de dados de API, estilizando com
-							styled-components, splash screens, listagem e Deploy.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="android">
-						<header>Android (Java)</header>
-						<main>
-							Linguagem usada na publicação dos primeiros aplicativos. Experiência com
-							consulta de dados de api e firebase.
-						</main>
-						<footer></footer>
-					</article>
-				</div>
-				<div>
-					<h3>Devops e controle de versão</h3>
-					<article class="git">
-						<header>GIT</header>
-						<main>
-							Controle de versão usado diariamente, experiencia, criação de branch,
-							stash, push, commit, automação em hooks, padronização de mensagem de
-							commit linkando com cartão da tarefa (JIRA/Azuro DEVOPS)
-						</main>
-						<footer></footer>
-					</article>
-					<article class="hg">
-						<header>Mercurial</header>
-						<main>
-							Controle versão usado na TARS, onde tive experiencia com clone, commit,
-							criação de branch, merge e também mostrei a equipe o recurso shelve,
-							similar ao "stash" do git. Atráves da interface
-							<a href="https://tortoisehg.bitbucket.io/">TortoiseHG</a>.
-						</main>
-						<footer></footer>
-					</article>
-					<article class="docker">
-						<header>Docker</header>
-						<main>Estudando esta ferramenta.</main>
-						<footer></footer>
-					</article>
-				</div>
-			</section>
-			<h2>Idiomas</h2>
-			<section id="languages">
-				<article class="language brazil">
-					<h3>Português Nativo</h3>
-					<p></p>
-				</article>
-				<article class="language usa">
-					<h3>Inglês avançado</h3>
-					<p></p>
-				</article>
-			</section>
+				<p class="ptbr">Ultima atualização SET/2024</p>
+				<p class="enus">Last update SEP/2024</p>
+			</footer>
 		</main>
-		<footer>
-			<h2>Vamos trabalhar juntos!</h2>
-			<h3>Tem um projeto/trabalhos que gostaria de discutir? entre em contato</h3>
-			<div>
-				<a
-					class="footer-social fab fa-github fa-2x"
-					alt="Github"
-					href="https://github.com/josueplacido">
-				</a>
-				<a
-					class="footer-social fas fa-envelope fa-2x"
-					alt="Gmail"
-					href="mailto:juplacido.jnr@gmail.com">
-				</a>
-				<a
-					class="footer-social fab fa-microsoft fa-2x"
-					alt="Outlook"
-					href="mailto:ozzyplacidojunior@hotmail.com">
-				</a>
-				<a
-					class="footer-social fab fa-linkedin fa-2x"
-					alt="Linkedin"
-					href="https://linkedin.com/josueplacido">
-				</a>
-				<a
-					class="footer-social fab fa-facebook fa-2x"
-					alt="Linkedin"
-					href="https://www.facebook.com/josue.placido.3">
-				</a>
-				<a
-					class="footer-social fab fa-whatsapp fa-2x"
-					alt="Linkedin"
-					href="https://api.whatsapp.com/send?phone=991091914">
-				</a>
-			</div>
-			<p>Ultima atualização MAI/2024</p>
-		</footer>
+		<aside id="modal">
+			<button class="fa fa-times fa-2x" onclick="closeModal();"></button>
+			<img src="" />
+		</aside>
 	</body>
 	<script rel="text/javascr" src="script.js"></script>
 </html>
